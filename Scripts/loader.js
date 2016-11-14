@@ -13,7 +13,7 @@ function onNavClick() {
 	var toLoad = convertLink($(this).attr('href'));
 	hideContent();
 	showLoader();
-	$('#content').load(toLoad,'',showNewContent);
+	$('#content').load(toLoad,'',hideLoader);
 }
 
 function hideContent() {
@@ -21,17 +21,17 @@ function hideContent() {
 }
 
 function showNewContent() {
-	$('#content').show('normal',hideLoader);
+	$('#content').show('normal');
 }
 
 function showLoader() {
 	$('#wrapper').empty();
-	$('#wrapper').append('<span id="load">Loading...</span>');
+	$('#wrapper').append('<div class="loader" id="load"></div>');
 	$('#load').fadeIn('normal');
 }
 
 function hideLoader() {
-	$('#load').fadeOut('normal');
+	$('#load').fadeOut('normal',showNewContent);
 }
 
 var preloaded = false;
