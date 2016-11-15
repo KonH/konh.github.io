@@ -11,6 +11,7 @@ function convertLink(link) {
 
 function onNavClick() {
 	var toLoad = convertLink($(this).attr('href'));
+	trackPage(toLoad);
 	hideContent();
 	showLoader();
 	$('#content').load(toLoad,'',hideLoader);
@@ -21,6 +22,7 @@ function hideContent() {
 }
 
 function showNewContent() {
+	addTrackHandlers();
 	$('#content').show('normal');
 }
 
@@ -40,7 +42,7 @@ function checkPreload() {
 	var hash = window.location.hash.substr(1);
 	$('nav li a').each(checkPreloadItem);
 	if( preloaded == false ) {	
-		$('#content').load("home.html");
+		$('#content').load("home.html", '', addTrackHandlers);
 	}
 }
 
@@ -49,6 +51,6 @@ function checkPreloadItem() {
 	var toLoad = convertLink($(this).attr('href'));
 	if(hash+".html" == toLoad ){
 		preloaded = true;
-		$('#content').load(toLoad);
+		$('#content').load(toLoad, '', addTrackHandlers);
 	}
 }
