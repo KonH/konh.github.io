@@ -11,6 +11,7 @@ function convertLink(link) {
 
 function onNavClick() {
 	var toLoad = convertLink($(this).attr('href'));
+	setActiveItem($(this));
 	trackPage(toLoad);
 	hideContent();
 	showLoader();
@@ -52,5 +53,11 @@ function checkPreloadItem() {
 	if(hash+".html" == toLoad ){
 		preloaded = true;
 		$('#content').load(toLoad, '', addTrackHandlers);
+		setActiveItem($(this));
 	}
+}
+
+function setActiveItem(item) {
+	$(".nav").find(".active").removeClass("active");
+	item.parent().addClass("active");
 }
