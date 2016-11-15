@@ -40,10 +40,20 @@ div .thumbnail_container {
 
 .content_box {
 	position: relative;
+	top: 10px;
 	left: 10px;
 }
 
 .info_entry {
 	float: left;
+	display: block;
 	margin: 0 0 0 10px;
+}
+
+.text_content {
+	float: left;
+	display: block;
+	position: relative; 
+	left: 15px;
+	width: 70%;
 }

@@ -58,8 +58,9 @@ function checkPreloadItem() {
 }
 
 function setActiveItem(item) {
+	var href = item.attr('href');
 	$(".nav").find(".active").removeClass("active");
-	item.parent().addClass("active");
+	$(".nav").find("[href='" + href + "']").parent().addClass("active");
 }
 
 function onLoadComplete() {
