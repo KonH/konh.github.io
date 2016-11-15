@@ -37,3 +37,13 @@ div .thumbnail_container {
 .contact_logo {
 	height: 2em;
 }
+
+.content_box {
+	position: relative;
+	left: 10px;
+}
+
+.info_entry {
+	float: left;
+	margin: 0 0 0 10px;
+}
