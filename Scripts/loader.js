@@ -23,7 +23,7 @@ function hideContent() {
 }
 
 function showNewContent() {
-	addTrackHandlers();
+	onLoadComplete();
 	$('#content').show('normal');
 }
 
@@ -43,7 +43,7 @@ function checkPreload() {
 	var hash = window.location.hash.substr(1);
 	$('nav li a').each(checkPreloadItem);
 	if( preloaded == false ) {	
-		$('#content').load("home.html", '', addTrackHandlers);
+		$('#content').load("home.html", '', onLoadComplete);
 	}
 }
 
@@ -52,7 +52,7 @@ function checkPreloadItem() {
 	var toLoad = convertLink($(this).attr('href'));
 	if(hash+".html" == toLoad ){
 		preloaded = true;
-		$('#content').load(toLoad, '', addTrackHandlers);
+		$('#content').load(toLoad, '', onLoadComplete);
 		setActiveItem($(this));
 	}
 }
@@ -60,4 +60,9 @@ function checkPreloadItem() {
 function setActiveItem(item) {
 	$(".nav").find(".active").removeClass("active");
 	item.parent().addClass("active");
+}
+
+function onLoadComplete() {
+	setupImages();
+	addTrackHandlers();
 }

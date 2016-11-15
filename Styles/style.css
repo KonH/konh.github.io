@@ -21,3 +21,15 @@
 	position: relative;
 	top: -1.5em;
 }
+
+body .popover {
+	max-width: 530px;
+}
+
+.popover img {
+	max-width: 500px;
+}
+
+div .thumbnail_container {
+	max-width: 150px;
+}
