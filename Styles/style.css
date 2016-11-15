@@ -33,3 +33,7 @@ body .popover {
 div .thumbnail_container {
 	max-width: 150px;
 }
+
+.contact_logo {
+	height: 2em;
+}
