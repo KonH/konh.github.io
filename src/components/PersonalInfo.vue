@@ -16,19 +16,22 @@
   </p>
   <p>
     In spare time I investigating different stacks and trying new things, pet
-    projects listed <a class="todo" href="TODO">here</a>.
+    projects listed <router-link to="/projects">here</router-link>.
   </p>
   <p>
     Also, I'm Open-Source Software enthusiast and have active github
     <a href="https://github.com/KonH">profile</a>, including some
     <a class="todo" href="TODO">pull requests</a>.
   </p>
-  <p>You can contact me through social accounts <a class="todo" href="TODO">here</a>.</p>
+  <p>
+    You can contact me through social accounts
+    <a class="todo" href="TODO">here</a>.
+  </p>
   <p>Any connections are welcome!</p>
 </template>
 
 <script lang="ts">
 import { Vue } from "vue-class-component";
 
-export default class Home extends Vue {}
+export default class PersonalInfo extends Vue {}
 </script>
