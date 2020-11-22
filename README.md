@@ -5,6 +5,11 @@
 npm install
 ```
 
+## Refresh projects
+```
+npm run refresh_projects
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve

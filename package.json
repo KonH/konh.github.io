@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "refresh_projects": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --username KonH --output src/assets/repositories.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\""
   },
   "dependencies": {
     "core-js": "^3.6.5",
