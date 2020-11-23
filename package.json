@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "refresh_projects": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username KonH --output src/assets/repositories.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\""
+    "refresh_projects": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username KonH --output src/assets/repositories.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"",
+    "refresh_pull_requests": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer -t pullrequests --accessToken $GH_ACCESS_TOKEN --username konh --output src/assets/pull_requests.json --filter \"HtmlUrl;Title;CreatedAt;PullRequest.Merged;\""
   },
   "dependencies": {
     "core-js": "^3.6.5",

@@ -1,0 +1,578 @@
+[
+  {
+    "HtmlUrl": "https://github.com/KonH/GithubExplorer/pull/1",
+    "Title": "Enrich PRs with missing data, basic retries and access token auth",
+    "CreatedAt": "2020-11-23T11:20:23+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/konh.github.io/pull/18",
+    "Title": "New frontend",
+    "CreatedAt": "2020-11-20T11:54:40+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/open-telemetry/opentelemetry-dotnet/pull/1424",
+    "Title": "Circular buffer yields on single-core machines",
+    "CreatedAt": "2020-10-29T23:49:30+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/LeagueSandbox/GameServer/pull/1024",
+    "Title": "Progress #1009 -- Change field names to match expected values",
+    "CreatedAt": "2020-10-04T03:31:36+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/webview-cs/webview-cs/pull/32",
+    "Title": "Fix typo in Readme",
+    "CreatedAt": "2020-10-03T17:52:45+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/rubberduck-vba/Rubberduck/pull/5590",
+    "Title": "Add additional checks to ensure that selection is valid",
+    "CreatedAt": "2020-10-03T15:51:53+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/jellyfin/jellyfin/pull/4265",
+    "Title": "Remove unnecessary null checks in some places",
+    "CreatedAt": "2020-10-03T15:06:43+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/keijiro/KinoGlitch/pull/13",
+    "Title": "Remove C# warnings in latest Unity versions",
+    "CreatedAt": "2020-10-03T14:19:23+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/nuke-build/nuke/pull/567",
+    "Title": "Remove unused variable introduced by refactoring",
+    "CreatedAt": "2020-10-01T15:45:59+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/shouldly/shouldly/pull/681",
+    "Title": "Adds DynamicShould.Throw method to cover corner case",
+    "CreatedAt": "2020-10-01T12:20:12+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/TetrisGame/pull/2",
+    "Title": "Tech/optimization",
+    "CreatedAt": "2020-09-12T05:26:06+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/TetrisGame/pull/1",
+    "Title": "Basic AI implementation",
+    "CreatedAt": "2020-09-11T11:42:25+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/HolyMonkey/unity-typed-scenes/pull/16",
+    "Title": "Fix typos and punctuation",
+    "CreatedAt": "2020-08-10T04:01:57+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/facebook/jest/pull/10260",
+    "Title": "chore (jest-reporters): add missing space in coverage report message",
+    "CreatedAt": "2020-07-08T11:30:38+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/spekt/nunit.testlogger/pull/65",
+    "Title": "Tuple missing types",
+    "CreatedAt": "2020-07-07T14:52:27+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/microsoft/Microsoft.Unity.Analyzers/pull/72",
+    "Title": "Check generic type parameters in UNT0014 diagnostic",
+    "CreatedAt": "2020-05-15T13:17:57+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/GameSystem/pull/1",
+    "Title": "New command usage",
+    "CreatedAt": "2020-04-17T11:01:48+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/17",
+    "Title": "Add direction indicator",
+    "CreatedAt": "2019-10-05T08:12:45+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/11",
+    "Title": "Add scenes",
+    "CreatedAt": "2019-10-05T07:18:39+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/9",
+    "Title": "Restore menu",
+    "CreatedAt": "2019-10-05T07:08:35+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/7",
+    "Title": "Add direction indicator",
+    "CreatedAt": "2019-10-05T05:17:05+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/4",
+    "Title": "Enable Unity analytics",
+    "CreatedAt": "2019-10-05T03:29:44+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/3",
+    "Title": "Menu",
+    "CreatedAt": "2019-10-05T03:21:29+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/2",
+    "Title": "Unity upgrade",
+    "CreatedAt": "2019-10-04T15:33:42+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Game-Jam-Dream-Team/LD45Project/pull/1",
+    "Title": "One click publish",
+    "CreatedAt": "2019-09-30T14:59:06+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/enduro2d/enduro2d/pull/95",
+    "Title": "Fix typo in make_look_... function names",
+    "CreatedAt": "2019-08-17T02:16:55+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/enduro2d/enduro2d/pull/94",
+    "Title": "Code style/change str/str_view length() to size() calls",
+    "CreatedAt": "2019-08-16T15:36:15+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Unity-Technologies/NavMeshComponents/pull/131",
+    "Title": "Fix typo in documentation",
+    "CreatedAt": "2019-06-18T19:44:49+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/mongodb/mongo-csharp-driver/pull/372",
+    "Title": "CSHARP-2595: Fix initialization on .NET Core 3.0 preview 4.",
+    "CreatedAt": "2019-04-20T10:41:32+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/azixMcAze/Unity-SerializableDictionary/pull/8",
+    "Title": "Fix compiler warning in Unity 2018\u002B",
+    "CreatedAt": "2019-04-06T09:55:24+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/microsoft/xbox-live-unity-plugin/pull/275",
+    "Title": "Fix incorrrect link for CONTRIBUTING.md in readme",
+    "CreatedAt": "2019-04-06T08:56:57+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/gwiazdorrr/BetterStreamingAssets/pull/5",
+    "Title": "Exception usage \u0026 minor improvements",
+    "CreatedAt": "2019-04-06T08:29:16+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/neuecc/UniRx/pull/384",
+    "Title": "Fix typo in comment",
+    "CreatedAt": "2019-02-04T14:03:30+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/ByronMayne/Weaver/pull/17",
+    "Title": "Fix small typo in Readme",
+    "CreatedAt": "2019-01-31T12:51:35+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/utkaka/UnityBuildVariants/pull/1",
+    "Title": "Fix Obsolete warning on Unity 2017.3\u002B",
+    "CreatedAt": "2018-12-18T11:10:10+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/LD43Project/pull/1",
+    "Title": "Create LICENSE",
+    "CreatedAt": "2018-12-04T14:14:29+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/36",
+    "Title": "UI improvements",
+    "CreatedAt": "2018-11-10T17:57:34+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/35",
+    "Title": "Remove duplicated code",
+    "CreatedAt": "2018-11-10T10:30:19+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/34",
+    "Title": "Add asset validation when data refreshing, etc.",
+    "CreatedAt": "2018-11-06T13:26:53+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/33",
+    "Title": "Add script to export .unitypackage with filtration",
+    "CreatedAt": "2018-11-06T12:43:19+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/31",
+    "Title": "Fix working on Rider",
+    "CreatedAt": "2018-11-05T11:18:29+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/29",
+    "Title": "Add Rider docs",
+    "CreatedAt": "2018-10-30T17:01:47+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/28",
+    "Title": "New badge",
+    "CreatedAt": "2018-10-30T14:32:58+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/27",
+    "Title": "Nuget package - wip",
+    "CreatedAt": "2018-10-29T15:29:34+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/26",
+    "Title": "Ci#17",
+    "CreatedAt": "2018-10-29T14:33:06+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/25",
+    "Title": "Show details#13",
+    "CreatedAt": "2018-10-29T13:45:20+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/24",
+    "Title": "Add sample .editorconfig file",
+    "CreatedAt": "2018-10-29T13:10:43+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/22",
+    "Title": "Fix code-style",
+    "CreatedAt": "2018-10-27T13:18:09+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/dotnet/BenchmarkDotNet/pull/930",
+    "Title": "Fix minor spelling issues and typos",
+    "CreatedAt": "2018-10-27T12:15:11+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/11",
+    "Title": "Docs#6",
+    "CreatedAt": "2018-10-27T08:23:39+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/10",
+    "Title": "Show warnings from json#5",
+    "CreatedAt": "2018-10-27T08:05:06+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/9",
+    "Title": "Dependency fix#8",
+    "CreatedAt": "2018-10-27T06:52:23+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/7",
+    "Title": "Report import#4",
+    "CreatedAt": "2018-10-24T14:12:19+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UnityRefAnalyzer/pull/3",
+    "Title": "Scene info exporter#2",
+    "CreatedAt": "2018-10-24T11:47:49+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/184",
+    "Title": "fix(config): Simplify CLI option creation",
+    "CreatedAt": "2018-10-12T15:08:38+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/157",
+    "Title": " fix: ensure to directory/file don\u0027t exist before creating it (#155)",
+    "CreatedAt": "2018-10-06T04:25:55+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/153",
+    "Title": "chore: fix minor spelling issues and typos in comments and log messages",
+    "CreatedAt": "2018-10-05T15:43:55+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/neuecc/MessagePack-CSharp/pull/322",
+    "Title": "Made exception public to get ability to handle it properly on client side",
+    "CreatedAt": "2018-10-02T16:45:46+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/dkozar/edriven/pull/4",
+    "Title": "Just remove deprecated js \u0026 meta files",
+    "CreatedAt": "2018-10-02T16:03:06+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/dotnet/corefxlab/pull/2508",
+    "Title": "Move Tensor and related classes from System.Numerics to System.Numerics.Tensors",
+    "CreatedAt": "2018-10-02T14:01:21+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/129",
+    "Title": "feat: replace camel case arguments with dashed (#100)",
+    "CreatedAt": "2018-10-02T12:00:41+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/learningt2cod3/Creature-Miniature/pull/3",
+    "Title": "License file added",
+    "CreatedAt": "2018-10-01T14:55:24+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/github-for-unity/Unity/pull/905",
+    "Title": "Spool files in GitClient.Remove() method to prevent possible issues",
+    "CreatedAt": "2018-09-03T14:38:39+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Real-Serious-Games/C-Sharp-Promise/pull/79",
+    "Title": "Fix possible misleading code example",
+    "CreatedAt": "2018-07-18T02:53:09+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/marijnz/unity-shell/pull/7",
+    "Title": "Small code changes: remove useless class member and unused using directives",
+    "CreatedAt": "2018-07-13T13:14:54+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Unity-Technologies/unity-cache-server/pull/24",
+    "Title": "Fix link in table of contents",
+    "CreatedAt": "2018-04-11T14:52:44+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/FreezingJourney/pull/1",
+    "Title": "License added;",
+    "CreatedAt": "2018-03-11T07:23:19+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/mono/mono/pull/7464",
+    "Title": "Fixes Type.GetInterface fails to find implemented interface when \u0060ignoreCase: true\u0060 is used",
+    "CreatedAt": "2018-03-07T15:46:33+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/BeardedManStudios/ForgeNetworkingRemastered/pull/129",
+    "Title": "Fixed missed comma in docs;",
+    "CreatedAt": "2018-02-03T08:09:26+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/neuecc/MarkdownGenerator/pull/5",
+    "Title": "Proposed solution to filter document content by namespaces",
+    "CreatedAt": "2018-02-02T13:50:06+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/yandex/yandex-tank/pull/498",
+    "Title": "Typo fix in installation docs",
+    "CreatedAt": "2018-01-27T14:21:22+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/UDBase/pull/26",
+    "Title": "Docs",
+    "CreatedAt": "2016-11-01T15:33:03+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  }
+]

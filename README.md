@@ -5,9 +5,10 @@
 npm install
 ```
 
-## Refresh projects
+## Refresh data
 ```
 npm run refresh_projects
+npm run refresh_pull_requests
 ```
 
 ### Compiles and hot-reloads for development
