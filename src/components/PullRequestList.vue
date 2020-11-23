@@ -1,5 +1,5 @@
 <template>
-  <pull-request v-for="p in projects" :key="p.name" :model="p" />
+  <pull-request v-for="p in pullRequests" :key="p.title" :model="p" />
 </template>
 
 <script lang="ts">
@@ -12,7 +12,7 @@ import data from "@/assets/pull_requests.json";
   components: { PullRequest },
 })
 export default class PullRequestList extends Vue {
-  get projects() {
+  get pullRequests() {
     return data
       .map(PullRequestModel.fromJson)
       .filter(
