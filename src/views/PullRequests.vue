@@ -1,6 +1,6 @@
 <template>
   <div class="pull_requests">
-    <PullRequestList />
+    <pull-request-list />
   </div>
 </template>
 
