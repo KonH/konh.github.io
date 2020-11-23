@@ -1,5 +1,5 @@
 <template>
-  <img alt="Avatar" src="../assets/avatar.jpg" />
+  <img alt="Avatar" src="../assets/home/avatar.jpg" />
   <h1>Hello!</h1>
 
   <p>I am Konstantin, and my expertise is Unity/.NET development.</p>
