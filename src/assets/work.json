@@ -1,0 +1,77 @@
+[
+    {
+        "position": "Senior Developer",
+        "time": {
+            "from": "April 2018",
+            "to": "Present"
+        },
+        "company": {
+            "title": "Matryoshka Games",
+            "url": "http://www.matryoshka.com/",
+            "icon": "mg.png"
+        },
+        "experience": [
+            "TODO"
+        ],
+        "projects": [
+            {
+                "title": "Cooking Craze",
+                "url": "https://www.bigfishgames.com/us/en/game/cooking-craze.html"
+            }
+        ]
+    },
+    {
+        "position": "Middle Developer",
+        "time": {
+            "from": "April 2016",
+            "to": "April 2018"
+        },
+        "company": {
+            "title": "Deus Craft",
+            "url": "http://www.deuscraft.com/",
+            "icon": "deuscraft.png"
+        },
+        "experience": [
+            "TODO"
+        ],
+        "projects": [
+            {
+                "title": "Cooking Craze",
+                "url": "https://www.bigfishgames.com/us/en/game/cooking-craze.html"
+            }
+        ]
+    },
+    {
+        "position": "Team Lead",
+        "time": {
+            "from": "July 2013",
+            "to": "April 2016"
+        },
+        "company": {
+            "title": "AcademMedia",
+            "url": "",
+            "icon": "am.svg"
+        },
+        "experience": [
+            "TODO"
+        ],
+        "projects": [
+            {
+                "title": "Cartoon Camera",
+                "url": "https://www.youtube.com/watch?v=87CJCjq2ln0"
+            },
+            {
+                "title": "Fario Watario",
+                "url": "https://www.youtube.com/watch?v=KX0uPRFfpEg"
+            },
+            {
+                "title": "Mini Boat Chase",
+                "url": "https://www.youtube.com/watch?v=NHWqS1lcSI8"
+            },
+            {
+                "title": "Army Truck 2",
+                "url": "https://www.youtube.com/watch?v=XK9LU4rk8_U"
+            }
+        ]
+    }
+]
