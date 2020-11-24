@@ -5,8 +5,8 @@ class TimeModel {
 class CompanyModel {
   constructor(
     readonly title: string,
-    readonly icon: string,
-    readonly url: string
+    readonly url: string,
+    readonly icon: string
   ) {}
 }
 
@@ -23,17 +23,58 @@ export default class WorkModel {
     readonly projects: ProjectModel[]
   ) {}
 
-  /* eslint-disable @typescript-eslint/no-explicit-any */
-  static fromJson(json: any) {
-    return new WorkModel(
-      json.position,
-      new TimeModel(json.time.from, json.time.to),
-      new CompanyModel(json.company.title, json.company.icon, json.company.url),
-      json.experience,
-      /* eslint-disable @typescript-eslint/no-explicit-any */
-      json.projects.map(
-        (j: { title: string; url: string }) => new ProjectModel(j.title, j.url)
-      )
+  static load() {
+    const cookingCraze = new ProjectModel(
+      "Cooking Craze",
+      "https://www.bigfishgames.com/us/en/game/cooking-craze.html"
     );
+    return [
+      new WorkModel(
+        "Senior Developer",
+        new TimeModel("April 2018", "Present"),
+        new CompanyModel(
+          "Matryoshka Games",
+          "http://www.matryoshka.com/",
+          "mg.png"
+        ),
+        ["TODO"],
+        [cookingCraze]
+      ),
+      new WorkModel(
+        "Middle Developer",
+        new TimeModel("April 2016", "April 2018"),
+        new CompanyModel(
+          "Deus Craft",
+          "http://www.deuscraft.com/",
+          "deuscraft.png"
+        ),
+        ["TODO"],
+        [cookingCraze]
+      ),
+      new WorkModel(
+        "Team Lead",
+        new TimeModel("July 2013", "April 2016"),
+        new CompanyModel("AcademMedia", "", "am.svg"),
+        ["TODO"],
+        [
+          new ProjectModel(
+            "Cartoon Camera",
+            "https://www.youtube.com/watch?v=87CJCjq2ln0"
+          ),
+          new ProjectModel(
+            "Fario Watario",
+            "https://www.youtube.com/watch?v=KX0uPRFfpEg"
+          ),
+          new ProjectModel(
+            "Mini Boat Chase",
+            "https://www.youtube.com/watch?v=NHWqS1lcSI8"
+          ),
+          new ProjectModel(
+            "Army Truck 2",
+            "https://www.youtube.com/watch?v=XK9LU4rk8_U"
+          ),
+        ]
+      ),
+    ];
   }
 }

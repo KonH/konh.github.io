@@ -5,8 +5,15 @@ export default class ContactModel {
     readonly icon: string
   ) {}
 
-  /* eslint-disable @typescript-eslint/no-explicit-any */
-  static fromJson(json: any) {
-    return new ContactModel(json.title, json.url, json.icon);
+  static load() {
+    return [
+      new ContactModel("Mail", "konh@yandex.ru", "mail.png"),
+      new ContactModel("GitHub", "https://github.com/KonH", "github.png"),
+      new ContactModel(
+        "LinkedIn",
+        "https://www.linkedin.com/in/konhit",
+        "linkedin.png"
+      ),
+    ];
   }
 }
