@@ -11,8 +11,9 @@
     in <a href="https://matryoshka.com/">Matryoshka Games</a>.
   </p>
   <p>
-    More information about my work experience you can find
-    <a class="todo" href="TODO">here</a>.
+    More information about my work experience &amp; skills you can find
+    <router-link to="/work">here</router-link> and
+    <router-link to="/skills">here</router-link>.
   </p>
   <p>
     In spare time I investigating different stacks and trying new things, pet
@@ -21,13 +22,12 @@
   <p>
     Also, I'm Open-Source Software enthusiast and have active github
     <a href="https://github.com/KonH">profile</a>, including some
-    <a class="todo" href="TODO">pull requests</a>.
+    <router-link to="/pull_requests">pull requests</router-link>.
   </p>
   <p>
-    You can contact me through social accounts
-    <a class="todo" href="TODO">here</a>.
+    You can contact me
+    <router-link to="/contacts">here</router-link>. Any connections are welcome!
   </p>
-  <p>Any connections are welcome!</p>
 </template>
 
 <script lang="ts">
