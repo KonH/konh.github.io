@@ -50,7 +50,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "vue/no-v-html": "off"
+    }
   },
   "browserslist": [
     "> 1%",
