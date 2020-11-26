@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <a :href="model.htmlUrl">{{ model.name }}</a> (language:
-    {{ model.language }}, stars: {{ model.stargazersCount }}, updated at:
-    {{ model.updatedAt }})
-    <p>{{ model.description }}</p>
-  </div>
+  <li>
+    <div>
+      <a :href="model.htmlUrl">{{ model.name }}</a> {{ model.language }}<br />
+      {{ model.description }}
+    </div>
+  </li>
 </template>
 <script lang="ts">
 import { Vue } from "vue-class-component";
@@ -16,3 +16,8 @@ export default class Project extends Vue {
   model!: ProjectModel;
 }
 </script>
+<style scoped>
+div {
+  margin-bottom: 1rem;
+}
+</style>

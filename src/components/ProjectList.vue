@@ -1,5 +1,9 @@
 <template>
-  <project v-for="p in projects" :key="p.name" :model="p" />
+  <div class="content">
+    <ul>
+      <project v-for="p in projects" :key="p.name" :model="p" />
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
