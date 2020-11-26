@@ -39,4 +39,15 @@ a:any-link {
 .item {
   align-self: center;
 }
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 41.5%;
+}
+.content > ul {
+  display: inline-block;
+  text-align: left;
+}
 </style>

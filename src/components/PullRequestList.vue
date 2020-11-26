@@ -1,5 +1,9 @@
 <template>
-  <pull-request v-for="p in pullRequests" :key="p.title" :model="p" />
+  <div class="content">
+    <ul>
+      <pull-request v-for="p in pullRequests" :key="p.title" :model="p" />
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
