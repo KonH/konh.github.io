@@ -35,3 +35,9 @@ import { Vue } from "vue-class-component";
 
 export default class PersonalInfo extends Vue {}
 </script>
+<style scoped>
+img {
+  width: 16rem;
+  height: 16rem;
+}
+</style>

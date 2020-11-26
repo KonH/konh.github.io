@@ -1,5 +1,7 @@
 <template>
-  <contact v-for="c in contacts" :key="c.title" :model="c" />
+  <div class="box">
+    <contact v-for="c in contacts" :key="c.title" :model="c" />
+  </div>
 </template>
 
 <script lang="ts">

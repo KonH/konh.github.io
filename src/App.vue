@@ -1,26 +1,42 @@
 <template>
-  <div id="nav">
+  <h3 id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/work">Work</router-link> |
     <router-link to="/skills">Skills</router-link> |
     <router-link to="/projects">Projects</router-link> |
     <router-link to="/pull_requests">Pull Requests</router-link> |
     <router-link to="/contacts">Contacts</router-link>
-  </div>
+  </h3>
   <router-view />
 </template>
 
 <style>
+@font-face {
+  font-family: "JetBrainsMono-Regular";
+  src: url("fonts/jetbrains-mono/woff/JetBrainsMono-Regular.woff");
+}
+.background {
+  background-color: black;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "JetBrainsMono-Regular", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #a3d3ff;
   margin-top: 60px;
 }
 
-.todo {
-  color: red;
+a:any-link {
+  color: rgb(255, 243, 131);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  align-self: center;
 }
 </style>
