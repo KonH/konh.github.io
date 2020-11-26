@@ -1,23 +1,29 @@
 <template>
   <div>
-    <img
-      :src="require('@/assets/work/' + model.company.icon)"
-      width="32"
-      :alt="model.company.title"
-    />
     <h1>
+      <img
+        :src="require('@/assets/work/' + model.company.icon)"
+        :alt="model.company.title"
+      />
       {{ model.position }} at
       <a :href="model.company.url">{{ model.company.title }}</a>
     </h1>
     {{ model.time.from }} to {{ model.time.to }}
+
     <h2>Experience:</h2>
-    <ul>
-      <li v-for="e in model.experience" :key="e">{{ e }}</li>
-    </ul>
+    <div class="content">
+      <ul>
+        <li v-for="e in model.experience" :key="e">{{ e }}</li>
+      </ul>
+    </div>
     <h2>Projects:</h2>
-    <li v-for="p in model.projects" :key="p.title">
-      <a :href="p.url">{{ p.title }}</a>
-    </li>
+    <div class="content">
+      <ul>
+        <li v-for="p in model.projects" :key="p.title">
+          <a :href="p.url">{{ p.title }}</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -30,3 +36,9 @@ export default class Work extends Vue {
   model!: WorkModel;
 }
 </script>
+<style scoped>
+img {
+  width: 4rem;
+  height: auto;
+}
+</style>

@@ -1,9 +1,11 @@
 <template>
   <div>
     <h3>{{ model.title }}</h3>
-    <ul>
-      <li v-for="k in model.keys" :key="k" v-html="k"></li>
-    </ul>
+    <div class="content">
+      <ul>
+        <li v-for="k in model.keys" :key="k" v-html="k"></li>
+      </ul>
+    </div>
   </div>
 </template>
 <script lang="ts">
