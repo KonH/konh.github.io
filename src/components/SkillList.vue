@@ -1,11 +1,13 @@
 <template>
-  <h1>Core</h1>
-  <div v-for="c in coreSkills" :key="c[0]" :model="c">
-    <h2>{{ c[0] }}</h2>
-    <skill v-for="s in c[1]" :key="s" :model="s" />
+  <div>
+    <h1>Core</h1>
+    <div v-for="c in coreSkills" :key="c[0]" :model="c">
+      <h2>{{ c[0] }}</h2>
+      <skill v-for="s in c[1]" :key="s" :model="s" />
+    </div>
+    <h2>Other</h2>
+    <skill v-for="s in otherSkills" :key="s" :model="s" />
   </div>
-  <h2>Other</h2>
-  <skill v-for="s in otherSkills" :key="s" :model="s" />
 </template>
 
 <script lang="ts">

@@ -7,20 +7,25 @@
     <router-link to="/pull_requests">Pull Requests</router-link> |
     <router-link to="/contacts">Contacts</router-link>
   </h3>
-  <router-view />
+  <router-view id="view" />
 </template>
 
 <style>
 .background {
   background-color: black;
 }
+
+#view {
+  margin-top: 60px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #a3d3ff;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 a:any-link {
@@ -32,16 +37,12 @@ a:any-link {
   justify-content: center;
 }
 
-.item {
-  align-self: center;
-}
-
 .content {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 41.5%;
 }
+
 .content > ul {
   display: inline-block;
   text-align: left;

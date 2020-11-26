@@ -1,5 +1,7 @@
 <template>
-  <work v-for="w in works" :key="w.company.title" :model="w" />
+  <div>
+    <work v-for="w in works" :key="w.company.title" :model="w" />
+  </div>
 </template>
 
 <script lang="ts">
