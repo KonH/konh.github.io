@@ -37,7 +37,14 @@ export default class WorkModel {
           "http://www.matryoshka.com/",
           "mg.png"
         ),
-        ["TODO"],
+        [
+          "Admin tool development (ASP.NET Core, TypeScript)",
+          "Improve shared codebase for different projects",
+          "External services integration (BrainCloud)",
+          "CI/CD pipeline (TeamCity)",
+          "Code Review",
+          "Performance analysis",
+        ],
         [cookingCraze]
       ),
       new WorkModel(
@@ -48,14 +55,28 @@ export default class WorkModel {
           "http://www.deuscraft.com/",
           "deuscraft.png"
         ),
-        ["TODO"],
+        [
+          "Core/meta features development",
+          "Integration 2D art content",
+          "Content management extensions",
+          "Advanced asset bundles management",
+          "Custom incremental build pipeline",
+          "Native plugins integration (ads, FB, Crashlytics)",
+          "Optimization",
+          "Integration new features on server-side (Java/Spring)",
+        ],
         [cookingCraze]
       ),
       new WorkModel(
         "Team Lead",
         new TimeModel("July 2013", "April 2016"),
         new CompanyModel("AcademMedia", "", "am.svg"),
-        ["TODO"],
+        [
+          "Short-term games/application development",
+          "Build pipeline/project template for projects",
+          "Team management",
+          "Developer training initiative",
+        ],
         [
           new ProjectModel(
             "Cartoon Camera",
