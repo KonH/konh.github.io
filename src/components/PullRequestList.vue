@@ -1,8 +1,8 @@
 <template>
   <div class="content">
-    <ul>
+    <div>
       <pull-request v-for="p in pullRequests" :key="p.title" :model="p" />
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -57,3 +57,9 @@ export default class PullRequestList extends Vue {
   }
 }
 </script>
+<style scoped>
+.content {
+  display: flex;
+  justify-content: center;
+}
+</style>

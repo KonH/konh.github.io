@@ -1,10 +1,9 @@
 <template>
-  <li>
-    <div>
-      {{ model.repositoryName() }}<br />
-      <a :href="model.htmlUrl">{{ model.title }}</a>
-    </div>
-  </li>
+  <div>
+    <a class="repository">{{ model.repositoryName() }}</a
+    ><br />
+    <a :href="model.htmlUrl" class="link">{{ model.title }}</a>
+  </div>
 </template>
 <script lang="ts">
 import { Vue } from "vue-class-component";
@@ -19,5 +18,13 @@ export default class PullRequest extends Vue {
 <style scoped>
 div {
   margin-bottom: 1rem;
+}
+
+.repository {
+  font-size: 150%;
+}
+
+.link {
+  margin-left: 1.5rem;
 }
 </style>
