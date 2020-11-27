@@ -43,4 +43,8 @@ img {
   width: 16rem;
   height: 16rem;
 }
+
+div {
+  text-align: center;
+}
 </style>
