@@ -44,6 +44,7 @@
 
 a:any-link {
   color: rgb(255, 243, 131);
+  text-decoration: none;
 }
 
 a:hover {
