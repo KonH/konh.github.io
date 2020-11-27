@@ -11,6 +11,12 @@
 </template>
 
 <style>
+.root {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
+}
+
 .background {
   background-color: rgb(0, 3, 17);
 }

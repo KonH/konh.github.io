@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="root">
     <div>
       <project v-for="p in projects" :key="p.name" :model="p" />
     </div>
@@ -39,9 +39,3 @@ export default class ProjectList extends Vue {
   }
 }
 </script>
-<style scoped>
-.content {
-  display: flex;
-  justify-content: center;
-}
-</style>

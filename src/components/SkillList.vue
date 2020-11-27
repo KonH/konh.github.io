@@ -33,10 +33,6 @@ export default class SkillList extends Vue {
 }
 </script>
 <style scoped>
-.root {
-  margin-left: 20%;
-}
-
 h1 {
   margin-bottom: 0rem;
 }
