@@ -19,4 +19,8 @@ img {
   margin-left: 2rem;
   margin-right: 0.5rem;
 }
+
+a {
+  font-size: 150%;
+}
 </style>
