@@ -16,7 +16,7 @@
 
 <style>
 .background {
-  background-color: black;
+  background-color: rgb(0, 3, 17);
 }
 
 #nav {
