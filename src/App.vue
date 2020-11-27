@@ -46,6 +46,10 @@ a:any-link {
   color: rgb(255, 243, 131);
 }
 
+a:hover {
+  color: rgb(255, 153, 0);
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.25s;
