@@ -24,6 +24,6 @@ export default class ProjectList extends Vue {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 4rem;
+  margin: 1rem;
 }
 </style>

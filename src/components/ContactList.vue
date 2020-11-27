@@ -22,5 +22,6 @@ export default class ProjectList extends Vue {
 div {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 </style>
