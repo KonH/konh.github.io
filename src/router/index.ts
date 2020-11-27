@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import PersonalInfo from "@/components/PersonalInfo.vue";
 import WorkList from "@/components/WorkList.vue";
 import SkillList from "@/components/SkillList.vue";
@@ -40,7 +40,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
