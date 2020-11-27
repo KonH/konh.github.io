@@ -7,11 +7,7 @@
     <router-link to="/pull_requests">Pull Requests</router-link>
     <router-link to="/contacts">Contacts</router-link>
   </h3>
-  <router-view id="view" v-slot="{ Component }">
-    <transition name="fade">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+  <router-view id="view" />
 </template>
 
 <style>
@@ -49,14 +45,5 @@ a:any-link {
 
 a:hover {
   color: rgb(255, 153, 0);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.25s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>
