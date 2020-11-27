@@ -20,10 +20,22 @@ export default class ProjectList extends Vue {
     return data
       .map(ProjectModel.fromJson)
       .filter((p: ProjectModel) => !p.archived && !p.fork)
+      .map(this.tryFix)
       .sort(
         (a: ProjectModel, b: ProjectModel) =>
           b.updatedAt.getTime() - a.updatedAt.getTime()
       );
+  }
+
+  tryFix(m: ProjectModel) {
+    const cSharpProjects = [
+      "https://github.com/KonH/TetrisGame",
+      "https://github.com/KonH/LD44Project",
+    ];
+    if (cSharpProjects.includes(m.htmlUrl)) {
+      m.language = "C#";
+    }
+    return m;
   }
 }
 </script>
