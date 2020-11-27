@@ -1,12 +1,16 @@
 <template>
-  <div>
+  <div class="root">
     <h1>Core</h1>
     <div v-for="c in coreSkills" :key="c[0]" :model="c">
       <h2>{{ c[0] }}</h2>
-      <skill v-for="s in c[1]" :key="s" :model="s" />
+      <div>
+        <skill v-for="s in c[1]" :key="s" :model="s" />
+      </div>
     </div>
-    <h2>Other</h2>
-    <skill v-for="s in otherSkills" :key="s" :model="s" />
+    <div>
+      <h2>Other</h2>
+      <skill v-for="s in otherSkills" :key="s" :model="s" />
+    </div>
   </div>
 </template>
 
@@ -28,3 +32,18 @@ export default class SkillList extends Vue {
   }
 }
 </script>
+<style scoped>
+.root {
+  margin-left: 20%;
+}
+
+h1 {
+  margin-bottom: 0rem;
+}
+
+h2 {
+  margin-left: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+</style>
