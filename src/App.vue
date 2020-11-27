@@ -33,6 +33,10 @@
   margin: 0.5rem;
 }
 
+.router-link-active {
+  color: white !important;
+}
+
 #view {
   margin-top: 8rem;
 }
