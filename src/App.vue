@@ -1,12 +1,12 @@
 <template>
-  <h3 id="nav">
+  <p id="nav">
     <router-link to="/">Home</router-link>
     <router-link to="/work">Work</router-link>
     <router-link to="/skills">Skills</router-link>
     <router-link to="/projects">Projects</router-link>
     <router-link to="/pull_requests">Pull Requests</router-link>
     <router-link to="/contacts">Contacts</router-link>
-  </h3>
+  </p>
   <router-view id="view" />
 </template>
 
@@ -29,6 +29,7 @@
 
 #nav a {
   font-size: 150%;
+  font-weight: bold;
   margin: 0.5rem;
 }
 
