@@ -3,6 +3,11 @@
 # abort on errors
 set -e
 
+echo "Clean up old artifacts"
+rm -rf css
+rm -rf img
+rm -rf js
+
 echo "Running build..."
 npm run build
 
