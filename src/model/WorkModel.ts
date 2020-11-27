@@ -3,11 +3,7 @@ class TimeModel {
 }
 
 class CompanyModel {
-  constructor(
-    readonly title: string,
-    readonly url: string,
-    readonly icon: string
-  ) {}
+  constructor(readonly title: string, readonly url: string) {}
 }
 
 class ProjectModel {
@@ -32,11 +28,7 @@ export default class WorkModel {
       new WorkModel(
         "Senior Developer",
         new TimeModel("April 2018", "Present"),
-        new CompanyModel(
-          "Matryoshka Games",
-          "http://www.matryoshka.com/",
-          "mg.png"
-        ),
+        new CompanyModel("Matryoshka Games", "http://www.matryoshka.com/"),
         [
           "Admin tool development (ASP.NET Core, TypeScript)",
           "Improve shared codebase for different projects",
@@ -50,11 +42,7 @@ export default class WorkModel {
       new WorkModel(
         "Middle Developer",
         new TimeModel("April 2016", "April 2018"),
-        new CompanyModel(
-          "Deus Craft",
-          "http://www.deuscraft.com/",
-          "deuscraft.png"
-        ),
+        new CompanyModel("Deus Craft", "http://www.deuscraft.com/"),
         [
           "Core/meta features development",
           "Integration 2D art content",
@@ -70,7 +58,7 @@ export default class WorkModel {
       new WorkModel(
         "Team Lead",
         new TimeModel("July 2013", "April 2016"),
-        new CompanyModel("AcademMedia", "", "am.svg"),
+        new CompanyModel("AcademMedia", ""),
         [
           "Short-term games/application development",
           "Build pipeline/project template for projects",

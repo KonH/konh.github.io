@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <work v-for="w in works" :key="w.company.title" :model="w" />
   </div>
 </template>
@@ -18,3 +18,12 @@ export default class ProjectList extends Vue {
   }
 }
 </script>
+<style scoped>
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem;
+}
+</style>

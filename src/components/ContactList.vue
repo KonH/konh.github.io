@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div>
     <contact v-for="c in contacts" :key="c.title" :model="c" />
   </div>
 </template>
@@ -18,3 +18,9 @@ export default class ProjectList extends Vue {
   }
 }
 </script>
+<style scoped>
+div {
+  display: flex;
+  justify-content: center;
+}
+</style>
