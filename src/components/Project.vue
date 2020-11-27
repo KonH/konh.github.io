@@ -1,10 +1,10 @@
 <template>
-  <li>
-    <div>
-      <a :href="model.htmlUrl">{{ model.name }}</a> {{ model.language }}<br />
-      {{ model.description }}
-    </div>
-  </li>
+  <div>
+    <a :href="model.htmlUrl" class="repository">{{ model.name }}</a>
+    <a class="language">{{ model.language }}</a
+    ><br />
+    <a class="description">{{ model.description }}</a>
+  </div>
 </template>
 <script lang="ts">
 import { Vue } from "vue-class-component";
@@ -19,5 +19,17 @@ export default class Project extends Vue {
 <style scoped>
 div {
   margin-bottom: 1rem;
+}
+
+.repository {
+  font-size: 150%;
+}
+
+.language {
+  vertical-align: top;
+}
+
+.description {
+  margin-left: 1.5rem;
 }
 </style>
