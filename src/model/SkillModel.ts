@@ -37,6 +37,7 @@ export default class SkillModel {
             'Udemy <a href="https://www.udemy.com/certificate/UC-5cdf7732-98f9-4f19-b81d-c1ce9f239a98/">Архитектура ПО: внедрение зависимостей на C#</a>',
             'Udemy <a href="https://www.udemy.com/certificate/UC-56b07c78-0436-49f0-8fba-f6b0e2ae4898/">Mastering Reactive Extensions with C# and .NET</a>',
             'Udemy <a href="https://www.udemy.com/certificate/UC-8bd7c2c4-b51b-44d6-b509-a9e073fdd12a/">Advanced Topics in C#</a>',
+            'Udemy <a href="https://www.udemy.com/certificate/UC-609b535d-ad50-42f6-bf0e-8c337e760dd0/">C# Performance Tricks: How To Radically Speed Up Your Code</a>',
           ]),
           new SkillModel("Java", [
             "Developing new features for high-load game server based on Spring and MySQL/MongoDB",
