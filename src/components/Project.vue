@@ -1,6 +1,8 @@
 <template>
   <div>
-    <a :href="model.htmlUrl" class="repository">{{ model.name }}</a>
+    <a :href="model.htmlUrl" target="_blank" class="repository">{{
+      model.name
+    }}</a>
     <a class="language">{{ model.language }}</a
     ><br />
     <a class="description">{{ model.description }}</a>

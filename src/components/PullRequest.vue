@@ -2,7 +2,7 @@
   <div>
     <a class="repository">{{ model.repositoryName() }}</a
     ><br />
-    <a :href="model.htmlUrl" class="link">{{ model.title }}</a>
+    <a :href="model.htmlUrl" target="_blank" class="link">{{ model.title }}</a>
   </div>
 </template>
 <script lang="ts">

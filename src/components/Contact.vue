@@ -1,7 +1,7 @@
 <template>
   <div>
     <img :src="require('@/assets/contacts/' + model.icon)" :alt="model.title" />
-    <a class="item" :href="model.url">{{ model.title }}</a>
+    <a class="item" :href="model.url" target="_blank">{{ model.title }}</a>
   </div>
 </template>
 <script lang="ts">

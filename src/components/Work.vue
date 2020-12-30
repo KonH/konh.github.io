@@ -2,7 +2,9 @@
   <div class="root">
     <div class="header">
       <h1>
-        <a :href="model.company.url">{{ model.company.title }}</a
+        <a :href="model.company.url" target="_blank">{{
+          model.company.title
+        }}</a
         ><br />
         {{ model.position }}
       </h1>
@@ -12,7 +14,7 @@
       <div class="element">
         <h2>Projects</h2>
         <div v-for="p in model.projects" :key="p.title">
-          <a :href="p.url">{{ p.title }}</a>
+          <a :href="p.url" target="_blank">{{ p.title }}</a>
         </div>
       </div>
       <div class="element">

@@ -54,7 +54,7 @@ a:any-link {
   text-decoration: none;
 }
 
-a:hover {
+a:any-link:hover {
   color: rgb(255, 153, 0);
 }
 </style>
