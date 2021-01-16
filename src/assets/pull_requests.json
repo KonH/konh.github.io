@@ -1,5 +1,13 @@
 [
   {
+    "HtmlUrl": "https://github.com/GlitchEnzo/NuGetForUnity/pull/357",
+    "Title": "Do not use already imported in engine libraries while cleaning up",
+    "CreatedAt": "2020-12-17T14:35:31+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
     "HtmlUrl": "https://github.com/KonH/GithubExplorer/pull/1",
     "Title": "Enrich PRs with missing data, basic retries and access token auth",
     "CreatedAt": "2020-11-23T11:20:23+00:00",
@@ -12,7 +20,7 @@
     "Title": "New frontend",
     "CreatedAt": "2020-11-20T11:54:40+00:00",
     "PullRequest": {
-      "Merged": false
+      "Merged": true
     }
   },
   {

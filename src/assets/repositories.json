@@ -553,10 +553,10 @@
     "HtmlUrl": "https://github.com/KonH/konh.github.io",
     "Name": "konh.github.io",
     "Description": "Personal site",
-    "Language": "HTML",
+    "Language": "TypeScript",
     "Fork": false,
     "StargazersCount": 1,
-    "UpdatedAt": "2020-11-19T12:29:35+00:00",
+    "UpdatedAt": "2020-12-30T10:30:55+00:00",
     "Archived": false
   },
   {
@@ -737,6 +737,16 @@
     "Fork": true,
     "StargazersCount": 1,
     "UpdatedAt": "2020-05-12T13:48:27+00:00",
+    "Archived": false
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/NuGetForUnity",
+    "Name": "NuGetForUnity",
+    "Description": "A NuGet Package Manager for Unity",
+    "Language": null,
+    "Fork": true,
+    "StargazersCount": 0,
+    "UpdatedAt": "2020-12-17T14:12:26+00:00",
     "Archived": false
   },
   {
@@ -995,8 +1005,8 @@
     "Description": "Template for Unity game projects",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 29,
-    "UpdatedAt": "2020-11-25T01:18:26+00:00",
+    "StargazersCount": 31,
+    "UpdatedAt": "2021-01-03T20:04:51+00:00",
     "Archived": false
   },
   {
@@ -1165,8 +1175,8 @@
     "Description": "Unity Android native crash analyzer using .NET Core console utility",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 6,
-    "UpdatedAt": "2020-09-27T06:29:16+00:00",
+    "StargazersCount": 7,
+    "UpdatedAt": "2021-01-05T14:26:58+00:00",
     "Archived": false
   },
   {
