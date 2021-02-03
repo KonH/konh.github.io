@@ -18,6 +18,7 @@ export default class SkillModel {
             "Editor extensions (custom editors, scene post-processors, tools)",
             "Batch-mode build extensions",
             "Unit-tests usage",
+            'Udemy <a href="https://www.udemy.com/certificate/UC-e7b98c69-9c9a-411d-85fb-05e5a296c3f6/" target="_blank">Unity 2019 Learn to write better code making a City Builder</a>',
           ]),
         ],
       ],
