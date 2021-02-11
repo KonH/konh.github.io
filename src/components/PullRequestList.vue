@@ -52,6 +52,7 @@ export default class PullRequestList extends Vue {
       "https://github.com/Unity-Technologies/unity-cache-server/pull/24",
       "https://github.com/BeardedManStudios/ForgeNetworkingRemastered/pull/129",
       "https://github.com/yandex/yandex-tank/pull/498",
+      "https://github.com/TUC-Team/KazJamGame/pull/1",
     ];
     return urls.includes(url);
   }
