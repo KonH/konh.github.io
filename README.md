@@ -7,7 +7,7 @@ npm install
 
 ## Refresh data
 ```
-npm run refresh_projects
+npm run refresh_all_projects
 npm run refresh_pull_requests
 ```
 
