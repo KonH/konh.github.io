@@ -24,6 +24,6 @@ echo "Building container..."
 docker build -t konh.github.io .
 
 echo "Start container"
-docker run -dp 8081:8081 --name=konh.github.io konh.github.io
+docker run -dp 8081:8081 --name=konh.github.io --restart=unless-stopped konh.github.io
 
 echo "All done!"
