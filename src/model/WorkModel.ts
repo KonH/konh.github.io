@@ -24,10 +24,31 @@ export default class WorkModel {
       "Cooking Craze",
       "https://www.bigfishgames.com/us/en/game/cooking-craze.html"
     );
+    const megaFarm = new ProjectModel(
+      "Mega Farm",
+      "https://matryoshka.com/games-en.html#tribe-rush"
+    );
+    const cityRescue = new ProjectModel(
+      "Rescue Dash",
+      "https://matryoshka.com/games-en.html#city-rescue"
+    );
     return [
       new WorkModel(
+        "Chief Technical Officer",
+        new TimeModel("January 2021", "Present"),
+        new CompanyModel("Matryoshka Games", "http://www.matryoshka.com/"),
+        [
+          "Technical management",
+          "Performance Review",
+          "Code Review",
+          "Improve shared codebase for different projects",
+          "Development: .NET, TeamCity, BrainCloud",
+        ],
+        [cookingCraze, megaFarm, cityRescue]
+      ),
+      new WorkModel(
         "Senior Developer",
-        new TimeModel("April 2018", "Present"),
+        new TimeModel("April 2018", "December 2020"),
         new CompanyModel("Matryoshka Games", "http://www.matryoshka.com/"),
         [
           "Admin tool development (ASP.NET Core, TypeScript)",
