@@ -40,6 +40,10 @@ export default class SkillModel {
             'Udemy <a href="https://www.udemy.com/certificate/UC-8bd7c2c4-b51b-44d6-b509-a9e073fdd12a/" target="_blank">Advanced Topics in C#</a>',
             'Udemy <a href="https://www.udemy.com/certificate/UC-609b535d-ad50-42f6-bf0e-8c337e760dd0/" target="_blank">C# Performance Tricks: How To Radically Speed Up Your Code</a>',
           ]),
+          new SkillModel("Tech Leadership", [
+            'Podlodka <a href="https://s3.eu-north-1.amazonaws.com/podlodka.crew.cert/techlead1/cert_techlead_1_konh%40yandex.ru.png">TechLead Crew #1</a>',
+            "Podlodka TechLead Crew #2",
+          ]),
           new SkillModel("Java", [
             "Developing new features for high-load game server based on Spring and MySQL/MongoDB",
             "University project: mobile app for counting expected lifetime based on bad habits and activity",
