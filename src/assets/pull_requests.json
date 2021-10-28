@@ -1,5 +1,93 @@
 [
   {
+    "HtmlUrl": "https://github.com/Leopotam/ecs-unityintegration/pull/6",
+    "Title": "Content-based namespace generation for script templates",
+    "CreatedAt": "2021-10-18T14:39:18+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/maximus-prime-909/unity-resources/pull/9",
+    "Title": "Code cleanup",
+    "CreatedAt": "2021-10-12T13:27:16+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Team-on/UnityBuildManager/pull/6",
+    "Title": "Remove unused using directives \u0026 redundant qualifiers",
+    "CreatedAt": "2021-10-12T13:18:56+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/Nox7atra/SimpleRaycastSystem/pull/1",
+    "Title": "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E Unity Package",
+    "CreatedAt": "2021-10-12T12:49:29+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/djkaty/Il2CppInspector/pull/190",
+    "Title": "Fix get-plugins.sh permissions to allow run it after clean checkout",
+    "CreatedAt": "2021-10-04T10:21:31+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/redbluegames/unity-mulligan-renamer/pull/285",
+    "Title": "Do not depend on \u0022Assets/\u0022 while detecting asset relative path (#281)",
+    "CreatedAt": "2021-10-03T11:06:42+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/unioulu/gameclue-spacegame/pull/68",
+    "Title": "Remove unwanted changes from unfinished merge (#34)",
+    "CreatedAt": "2021-10-03T09:45:30+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/JoshClose/CsvHelper/pull/1872",
+    "Title": "Update injection characters defaults",
+    "CreatedAt": "2021-10-03T06:18:47+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/jellyfin/jellyfin/pull/6651",
+    "Title": "Fix part of common warnings",
+    "CreatedAt": "2021-10-03T04:07:59+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/CleverRaven/Cataclysm-DDA/pull/52048",
+    "Title": "Remove DURABLE_MELEE on cudgel (#51251)",
+    "CreatedAt": "2021-10-02T13:55:02+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/OpenRA/OpenRA/pull/19706",
+    "Title": "Remove GC.SuppressFinalize calls from classes without destructors",
+    "CreatedAt": "2021-10-02T12:18:27+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
     "HtmlUrl": "https://github.com/b3b00/coverlet-action/pull/5",
     "Title": "Fix typo",
     "CreatedAt": "2021-04-28T13:25:13+00:00",
