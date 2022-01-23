@@ -19,6 +19,7 @@ export default class SkillModel {
             "Batch-mode build extensions",
             "Unit-tests usage",
             'Udemy <a href="https://www.udemy.com/certificate/UC-e7b98c69-9c9a-411d-85fb-05e5a296c3f6/" target="_blank">Unity 2019 Learn to write better code making a City Builder</a>',
+            'Udemy <a href="https://www.udemy.com/certificate/UC-9db5ceca-ef3a-4305-bff2-d43eba3d0f15/" target="_blank">RPG Core Combat Creator: Learn Intermediate Unity C# Coding</a>',
           ]),
         ],
       ],
