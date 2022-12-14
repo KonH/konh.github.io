@@ -1,10 +1,122 @@
 [
   {
-    "HtmlUrl": "https://github.com/Leopotam/ecs-unityintegration/pull/6",
-    "Title": "Content-based namespace generation for script templates",
-    "CreatedAt": "2021-10-18T14:39:18+00:00",
+    "HtmlUrl": "https://github.com/microsoft/component-detection/pull/311",
+    "Title": "Use extended log file names format to prevent collisions in concurrent builds",
+    "CreatedAt": "2022-10-19T16:54:32+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/dotnet/runtime/pull/77223",
+    "Title": "System.DirectoryServices.Protocols.LdapConnection: allow non-ASCII Passwords on Linux Systems",
+    "CreatedAt": "2022-10-19T16:45:17+00:00",
     "PullRequest": {
       "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/62795",
+    "Title": "Fix description for crypto.randomInt function",
+    "CreatedAt": "2022-10-19T15:17:08+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/grafana/grafana/pull/57209",
+    "Title": "Loki/Prometheus: Change signature - return non-reference from ReadPrometheusStyleResult",
+    "CreatedAt": "2022-10-18T18:30:10+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/JoshClose/CsvHelper/pull/2053",
+    "Title": "Add constructorArgs params argument to TypeConverterAttribute",
+    "CreatedAt": "2022-10-10T15:41:28+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/ardalis/GuardClauses/pull/237",
+    "Title": "Add NullOrEmpty and NullOrWhiteSpace overloads for ReadOnlySpan\u003Cchar\u003E",
+    "CreatedAt": "2022-10-09T17:49:09+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/nunit/nunit/pull/4224",
+    "Title": ".NET 7.0 support",
+    "CreatedAt": "2022-10-08T20:52:30+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/ScottPlot/ScottPlot/pull/2160",
+    "Title": "Plot.AddBarSeries: new Bar[] overload",
+    "CreatedAt": "2022-10-07T20:39:00+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/LivelibExport/pull/11",
+    "Title": "Add 10-star to 5-star rating converter",
+    "CreatedAt": "2022-09-14T17:42:15+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/heroku/12factor/pull/318",
+    "Title": "Improve tables presentation in EPUB version",
+    "CreatedAt": "2022-08-11T17:42:53+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/DedAnton/NextGenMapper/pull/53",
+    "Title": "Use internal access modifier instead of public for mappers",
+    "CreatedAt": "2022-08-09T17:24:20+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/LivelibExport/pull/8",
+    "Title": "Do not store full link, construct it from detected id",
+    "CreatedAt": "2022-07-14T16:58:19+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/LivelibExport/pull/6",
+    "Title": "Parsing fixes",
+    "CreatedAt": "2022-05-26T16:57:46+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/hadashiA/VContainer/pull/347",
+    "Title": "Fix syntax issue in site docs",
+    "CreatedAt": "2022-02-11T08:21:11+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/hadashiA/VContainer/pull/346",
+    "Title": "Fix incorrect links in readme",
+    "CreatedAt": "2022-02-11T07:42:39+00:00",
+    "PullRequest": {
+      "Merged": true
     }
   },
   {
@@ -683,14 +795,6 @@
     "HtmlUrl": "https://github.com/yandex/yandex-tank/pull/498",
     "Title": "Typo fix in installation docs",
     "CreatedAt": "2018-01-27T14:21:22+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/KonH/UDBase/pull/26",
-    "Title": "Docs",
-    "CreatedAt": "2016-11-01T15:33:03+00:00",
     "PullRequest": {
       "Merged": true
     }
