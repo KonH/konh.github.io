@@ -1,5 +1,133 @@
 [
   {
+    "HtmlUrl": "https://github.com/dragouf/AppStoreServerApi/pull/2",
+    "Title": "Upgrade to .NET 7",
+    "CreatedAt": "2023-11-06T11:46:16+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/microsoft/component-detection/pull/879",
+    "Title": "Add FluentAssertions.Analyzers to Detectors.Tests, fix warnings",
+    "CreatedAt": "2023-10-26T22:00:07+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/ardalis/GuardClauses/pull/304",
+    "Title": "Add JetBrains.Annotations source code",
+    "CreatedAt": "2023-10-24T15:57:35+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/ardalis/CleanArchitecture/pull/613",
+    "Title": "Upgrade to .NET 8",
+    "CreatedAt": "2023-10-20T16:31:39+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1690",
+    "Title": "Add Unity.Mathematics support",
+    "CreatedAt": "2023-10-13T16:45:11+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/dotnet/runtime/pull/93479",
+    "Title": "Add IParsable\u003CUri\u003E implementation to System.Uri",
+    "CreatedAt": "2023-10-13T15:47:12+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/dotnet/aspnetcore/pull/51298",
+    "Title": "Add Overload for AddRateLimiter() Without Options Parameter",
+    "CreatedAt": "2023-10-11T16:49:42+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/marcominerva/DatabaseGPT/pull/8",
+    "Title": "Move NaturalLanguageQueryOptions out of DatabaseGptClient",
+    "CreatedAt": "2023-10-10T16:25:36+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1688",
+    "Title": "Fix releases links in README text",
+    "CreatedAt": "2023-10-05T15:59:24+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/GraesonB/ChatGPT-Wrapper-For-Unity/pull/16",
+    "Title": "Add option to import package through Unity Package Manager",
+    "CreatedAt": "2023-03-27T18:27:45+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/awesome-stable-diffusion/awesome-stable-diffusion/pull/53",
+    "Title": "Add StableDiffusionUnityTools",
+    "CreatedAt": "2023-01-16T17:05:06+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/baba-s/awesome-unity-open-source-on-github/pull/21",
+    "Title": "Add StableDiffusionUnityTools",
+    "CreatedAt": "2023-01-16T17:05:03+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/proyecto26/awesome-unity/pull/4",
+    "Title": "Add StableDiffusionUnityTools",
+    "CreatedAt": "2023-01-16T17:05:01+00:00",
+    "PullRequest": {
+      "Merged": false
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/insthync/awesome-unity3d/pull/27",
+    "Title": "Add StableDiffusionUnityTools",
+    "CreatedAt": "2023-01-16T17:04:59+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/michidk/Unity-Script-Collection/pull/43",
+    "Title": "Add StableDiffusionUnityTools",
+    "CreatedAt": "2023-01-16T17:04:57+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/LivelibExport/pull/13",
+    "Title": "FlareSolverr usage",
+    "CreatedAt": "2022-12-20T22:37:42+00:00",
+    "PullRequest": {
+      "Merged": true
+    }
+  },
+  {
     "HtmlUrl": "https://github.com/microsoft/component-detection/pull/311",
     "Title": "Use extended log file names format to prevent collisions in concurrent builds",
     "CreatedAt": "2022-10-19T16:54:32+00:00",
@@ -28,7 +156,7 @@
     "Title": "Loki/Prometheus: Change signature - return non-reference from ReadPrometheusStyleResult",
     "CreatedAt": "2022-10-18T18:30:10+00:00",
     "PullRequest": {
-      "Merged": false
+      "Merged": true
     }
   },
   {
@@ -44,7 +172,7 @@
     "Title": "Add NullOrEmpty and NullOrWhiteSpace overloads for ReadOnlySpan\u003Cchar\u003E",
     "CreatedAt": "2022-10-09T17:49:09+00:00",
     "PullRequest": {
-      "Merged": false
+      "Merged": true
     }
   },
   {
@@ -336,7 +464,7 @@
     }
   },
   {
-    "HtmlUrl": "https://github.com/facebook/jest/pull/10260",
+    "HtmlUrl": "https://github.com/jestjs/jest/pull/10260",
     "Title": "chore (jest-reporters): add missing space in coverage report message",
     "CreatedAt": "2020-07-08T11:30:38+00:00",
     "PullRequest": {
@@ -667,134 +795,6 @@
     "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/184",
     "Title": "fix(config): Simplify CLI option creation",
     "CreatedAt": "2018-10-12T15:08:38+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/157",
-    "Title": " fix: ensure to directory/file don\u0027t exist before creating it (#155)",
-    "CreatedAt": "2018-10-06T04:25:55+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/153",
-    "Title": "chore: fix minor spelling issues and typos in comments and log messages",
-    "CreatedAt": "2018-10-05T15:43:55+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/neuecc/MessagePack-CSharp/pull/322",
-    "Title": "Made exception public to get ability to handle it properly on client side",
-    "CreatedAt": "2018-10-02T16:45:46+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/dkozar/edriven/pull/4",
-    "Title": "Just remove deprecated js \u0026 meta files",
-    "CreatedAt": "2018-10-02T16:03:06+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/dotnet/corefxlab/pull/2508",
-    "Title": "Move Tensor and related classes from System.Numerics to System.Numerics.Tensors",
-    "CreatedAt": "2018-10-02T14:01:21+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/stryker-mutator/stryker-net/pull/129",
-    "Title": "feat: replace camel case arguments with dashed (#100)",
-    "CreatedAt": "2018-10-02T12:00:41+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/learningt2cod3/Creature-Miniature/pull/3",
-    "Title": "License file added",
-    "CreatedAt": "2018-10-01T14:55:24+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/github-for-unity/Unity/pull/905",
-    "Title": "Spool files in GitClient.Remove() method to prevent possible issues",
-    "CreatedAt": "2018-09-03T14:38:39+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/Real-Serious-Games/C-Sharp-Promise/pull/79",
-    "Title": "Fix possible misleading code example",
-    "CreatedAt": "2018-07-18T02:53:09+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/marijnz/unity-shell/pull/7",
-    "Title": "Small code changes: remove useless class member and unused using directives",
-    "CreatedAt": "2018-07-13T13:14:54+00:00",
-    "PullRequest": {
-      "Merged": false
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/Unity-Technologies/unity-cache-server/pull/24",
-    "Title": "Fix link in table of contents",
-    "CreatedAt": "2018-04-11T14:52:44+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/KonH/FreezingJourney/pull/1",
-    "Title": "License added;",
-    "CreatedAt": "2018-03-11T07:23:19+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/mono/mono/pull/7464",
-    "Title": "Fixes Type.GetInterface fails to find implemented interface when \u0060ignoreCase: true\u0060 is used",
-    "CreatedAt": "2018-03-07T15:46:33+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/BeardedManStudios/ForgeNetworkingRemastered/pull/129",
-    "Title": "Fixed missed comma in docs;",
-    "CreatedAt": "2018-02-03T08:09:26+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/neuecc/MarkdownGenerator/pull/5",
-    "Title": "Proposed solution to filter document content by namespaces",
-    "CreatedAt": "2018-02-02T13:50:06+00:00",
-    "PullRequest": {
-      "Merged": true
-    }
-  },
-  {
-    "HtmlUrl": "https://github.com/yandex/yandex-tank/pull/498",
-    "Title": "Typo fix in installation docs",
-    "CreatedAt": "2018-01-27T14:21:22+00:00",
     "PullRequest": {
       "Merged": true
     }
