@@ -17,9 +17,17 @@ npm run serve
 ```
 
 ### Compiles and minifies for production
+
+macOS / Linux:
 ```
 ./deploy-github.sh
 ```
+
+Windows:
+```
+.\deploy-github.ps1
+```
+
 
 ### Lints and fixes files
 ```
