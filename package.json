@@ -7,10 +7,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "refresh_all_projects": "npm run refresh_projects_user && npm run refresh_projects_gjdt && npm run refresh_projects_tuc",
-    "refresh_projects_user": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username KonH --output src/assets/repositories_user.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"",
-    "refresh_projects_gjdt": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username Game-Jam-Dream-Team --output src/assets/repositories_gjdt.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"",
-    "refresh_projects_tuc": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username TUC-Team --output src/assets/repositories_tuc.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"",
-    "refresh_pull_requests": "dotnet tool update -g GithubExplorer.CommandLine && github_explorer -t pullrequests --accessToken $GH_ACCESS_TOKEN --username konh --output src/assets/pull_requests.json --filter \"HtmlUrl;Title;CreatedAt;PullRequest.Merged;\""
+    "refresh_projects_user": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username KonH --output src/assets/repositories_user.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"\"",
+    "refresh_projects_gjdt": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username Game-Jam-Dream-Team --output src/assets/repositories_gjdt.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"\"",
+    "refresh_projects_tuc": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username TUC-Team --output src/assets/repositories_tuc.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"\"",
+    "refresh_pull_requests": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer -t pullrequests --accessToken $GH_ACCESS_TOKEN --username konh --output src/assets/pull_requests.json --filter \"HtmlUrl;Title;CreatedAt;PullRequest.Merged;\"\""
   },
   "dependencies": {
     "core-js": "^3.26.1",
@@ -31,6 +31,7 @@
     "@vue/compiler-sfc": "^3.2.45",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8.29.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.8.0",
