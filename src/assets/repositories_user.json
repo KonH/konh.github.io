@@ -60,6 +60,16 @@
     "Archived": true
   },
   {
+    "HtmlUrl": "https://github.com/KonH/AnalyticsPipeline",
+    "Name": "AnalyticsPipeline",
+    "Description": "The opinionated approach combines a client-side SDK, operative \u002B historical data storage, and a data mart",
+    "Language": null,
+    "Fork": false,
+    "StargazersCount": 1,
+    "UpdatedAt": "2024-03-05T12:31:46+00:00",
+    "Archived": false
+  },
+  {
     "HtmlUrl": "https://github.com/KonH/analyticsServer",
     "Name": "analyticsServer",
     "Description": "Minimalistic analytics server written on Go and uses MongoDB as storage",
@@ -75,8 +85,8 @@
     "Description": ".NET (core) Client for the App Store Server API and Server to Server notification",
     "Language": "C#",
     "Fork": true,
-    "StargazersCount": 0,
-    "UpdatedAt": "2023-11-06T11:43:25+00:00",
+    "StargazersCount": 1,
+    "UpdatedAt": "2023-11-09T07:54:42+00:00",
     "Archived": false
   },
   {
@@ -305,8 +315,8 @@
     "Description": "Unfinished prototype of city manager",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 4,
-    "UpdatedAt": "2023-07-11T00:21:22+00:00",
+    "StargazersCount": 5,
+    "UpdatedAt": "2024-03-01T13:38:23+00:00",
     "Archived": false
   },
   {
@@ -715,8 +725,8 @@
     "Description": "Game project for Odd Weekend Game Jam, survival in frozen polar lands",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 1,
-    "UpdatedAt": "2020-11-26T14:19:34+00:00",
+    "StargazersCount": 2,
+    "UpdatedAt": "2024-03-14T20:07:15+00:00",
     "Archived": false
   },
   {
@@ -785,8 +795,8 @@
     "Description": "Shared codebase for game projects to speed up prototyping \u0026 development process",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 5,
-    "UpdatedAt": "2023-01-27T22:24:59+00:00",
+    "StargazersCount": 6,
+    "UpdatedAt": "2024-02-28T13:35:59+00:00",
     "Archived": true
   },
   {
@@ -865,8 +875,8 @@
     "Description": "Avalonia MVVM desktop personal investment dashboard",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 4,
-    "UpdatedAt": "2023-09-08T18:28:40+00:00",
+    "StargazersCount": 6,
+    "UpdatedAt": "2024-02-14T14:36:51+00:00",
     "Archived": false
   },
   {
@@ -876,7 +886,7 @@
     "Language": "C#",
     "Fork": false,
     "StargazersCount": 1,
-    "UpdatedAt": "2023-03-20T17:26:50+00:00",
+    "UpdatedAt": "2024-03-13T00:56:31+00:00",
     "Archived": true
   },
   {
@@ -995,8 +1005,8 @@
     "Description": "\u0421\u043A\u0440\u0438\u043F\u0442 \u0434\u043B\u044F \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0430 \u043F\u0440\u043E\u0447\u0438\u0442\u0430\u043D\u043D\u043E\u0433\u043E \u043D\u0430 Livelib \u0432 CSV-\u0444\u0430\u0439\u043B",
     "Language": "Python",
     "Fork": false,
-    "StargazersCount": 32,
-    "UpdatedAt": "2023-09-26T10:05:17+00:00",
+    "StargazersCount": 35,
+    "UpdatedAt": "2024-02-05T09:17:14+00:00",
     "Archived": false
   },
   {
@@ -1320,6 +1330,16 @@
     "Archived": false
   },
   {
+    "HtmlUrl": "https://github.com/KonH/serbian-playground",
+    "Name": "serbian-playground",
+    "Description": "Web playground for Serbian language learning",
+    "Language": "Vue",
+    "Fork": false,
+    "StargazersCount": 1,
+    "UpdatedAt": "2023-11-13T11:25:53+00:00",
+    "Archived": false
+  },
+  {
     "HtmlUrl": "https://github.com/KonH/Serializer",
     "Name": "Serializer",
     "Description": "Small library for serialization/deserialization files for C#.",
@@ -1395,8 +1415,8 @@
     "Description": "Editor utility to generate assets in Unity Editor via self-hosted \u0026 managed Stable Diffusion installations",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 38,
-    "UpdatedAt": "2023-11-02T15:58:12+00:00",
+    "StargazersCount": 53,
+    "UpdatedAt": "2024-03-19T12:03:42+00:00",
     "Archived": false
   },
   {
@@ -1435,8 +1455,8 @@
     "Description": "Implementation of classic Tetris game using Unity engine",
     "Language": "ShaderLab",
     "Fork": false,
-    "StargazersCount": 5,
-    "UpdatedAt": "2023-10-24T07:27:46+00:00",
+    "StargazersCount": 6,
+    "UpdatedAt": "2024-01-20T12:55:37+00:00",
     "Archived": false
   },
   {
@@ -1485,8 +1505,8 @@
     "Description": "Client-server Tic Tac Toe example game",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 5,
-    "UpdatedAt": "2023-01-27T22:24:56+00:00",
+    "StargazersCount": 7,
+    "UpdatedAt": "2024-02-28T13:34:44+00:00",
     "Archived": true
   },
   {
@@ -1515,8 +1535,8 @@
     "Description": "Template for Unity game projects",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 38,
-    "UpdatedAt": "2023-01-07T18:31:17+00:00",
+    "StargazersCount": 39,
+    "UpdatedAt": "2024-03-01T02:41:20+00:00",
     "Archived": false
   },
   {
@@ -1875,8 +1895,8 @@
     "Description": "Roslyn code analyzer to find method usages on scenes",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 6,
-    "UpdatedAt": "2022-12-14T21:51:53+00:00",
+    "StargazersCount": 8,
+    "UpdatedAt": "2024-02-28T13:34:22+00:00",
     "Archived": true
   },
   {
@@ -1955,8 +1975,8 @@
     "Description": "Samples to cover VContainer basic usage",
     "Language": "ShaderLab",
     "Fork": false,
-    "StargazersCount": 11,
-    "UpdatedAt": "2023-09-06T12:41:13+00:00",
+    "StargazersCount": 10,
+    "UpdatedAt": "2024-02-20T21:51:30+00:00",
     "Archived": false
   },
   {
