@@ -1,7 +1,6 @@
 <template>
   <p id="nav">
     <router-link to="/">Home</router-link>
-    <router-link to="/work">Work</router-link>
     <router-link to="/skills">Skills</router-link>
     <router-link to="/projects">Projects</router-link>
     <router-link to="/pull_requests">Pull Requests</router-link>

@@ -25,6 +25,7 @@ div {
 
 .repository {
   font-size: 150%;
+  margin-right: 0.25rem;
 }
 
 .language {

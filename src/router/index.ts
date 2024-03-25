@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import PersonalInfo from "@/components/PersonalInfo.vue";
-import WorkList from "@/components/WorkList.vue";
 import SkillList from "@/components/SkillList.vue";
 import ProjectList from "@/components/ProjectList.vue";
 import PullRequestList from "@/components/PullRequestList.vue";
@@ -11,11 +10,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "Home",
     component: PersonalInfo,
-  },
-  {
-    path: "/work",
-    name: "Work",
-    component: WorkList,
   },
   {
     path: "/skills",
