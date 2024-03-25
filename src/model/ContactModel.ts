@@ -7,7 +7,6 @@ export default class ContactModel {
 
   static load() {
     return [
-      new ContactModel("Mail", "konh@yandex.ru", "mail.png"),
       new ContactModel("GitHub", "https://github.com/KonH", "github.png"),
       new ContactModel(
         "LinkedIn",
