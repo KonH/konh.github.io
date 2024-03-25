@@ -59,7 +59,7 @@ export default class PullRequestList extends Vue {
       "https://github.com/baba-s/awesome-unity-open-source-on-github/pull/21",
       "https://github.com/proyecto26/awesome-unity/pull/4",
       "https://github.com/insthync/awesome-unity3d/pull/27",
-      "https://github.com/michidk/Unity-Script-Collection/pull/43"
+      "https://github.com/michidk/Unity-Script-Collection/pull/43",
     ];
     return urls.includes(url);
   }
