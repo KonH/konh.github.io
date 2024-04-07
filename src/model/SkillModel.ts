@@ -45,6 +45,7 @@ export default class SkillModel {
             'Podlodka <a href="https://s3.eu-north-1.amazonaws.com/podlodka.crew.cert/techlead1/cert_techlead_1_konh%40yandex.ru.png">TechLead Crew #1</a>',
             "Podlodka TechLead Crew #2",
             'Podlodka <a href="https://certificate.podlodka.io/techlead5/en/pdldk3a997d4d9a5d377538e4add4e0d232a4.png">TechLead Crew #5</a>',
+            'Podlodka <a href="https://certificate.podlodka.io/teamlead12/en/pdldk90482eb53b0e3c35a22f1907f05524e6.png">Teamlead Crew #12</a>',
           ]),
           new SkillModel("Java", [
             "Developing new features for high-load game server based on Spring and MySQL/MongoDB",
