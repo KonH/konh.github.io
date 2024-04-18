@@ -38,4 +38,12 @@ const router = createRouter({
   routes,
 });
 
+router.isReady().then(() => {
+  if (sessionStorage.redirect) {
+    const redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    router.push(redirect);
+  }
+});
+
 export default router;
