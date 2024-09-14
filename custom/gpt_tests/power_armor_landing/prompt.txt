@@ -1,0 +1,3 @@
+create me landing page (using tech you want) to sell powerarmor, which useful in nuclear apocalypse
+it should use existing images and ready to draw HTML page including embedded CSS
+my main goal - increase conversion to buy button
