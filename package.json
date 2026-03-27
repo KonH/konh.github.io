@@ -10,34 +10,30 @@
     "refresh_projects_user": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username KonH --output src/assets/repositories_user.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"\"",
     "refresh_projects_gjdt": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username Game-Jam-Dream-Team --output src/assets/repositories_gjdt.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"\"",
     "refresh_projects_tuc": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username TUC-Team --output src/assets/repositories_tuc.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"\"",
-    "refresh_pull_requests": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer -t pullrequests --accessToken $GH_ACCESS_TOKEN --username konh --output src/assets/pull_requests.json --filter \"HtmlUrl;Title;CreatedAt;PullRequest.Merged;\"\""
+    "refresh_pull_requests": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && /mnt/c/Users/KonH/.dotnet/tools/github_explorer.exe -t pullrequests --accessToken $GH_ACCESS_TOKEN --username konh --output src/assets/pull_requests.json --filter \\\"HtmlUrl;Title;CreatedAt;PullRequest.Merged;\\\"\""
   },
   "dependencies": {
-    "core-js": "^3.26.1",
-    "vue": "^3.2.45",
-    "vue-class-component": "^8.0.0-0",
-    "vue-property-decorator": "^10.0.0-rc.3",
-    "vue-router": "^4.1.6",
-    "vuex": "^4.1.0"
+    "core-js": "^3.38.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-plugin-typescript": "~5.0.8",
-    "@vue/cli-plugin-vuex": "~5.0.8",
     "@vue/cli-service": "~5.0.8",
-    "@vue/compiler-sfc": "^3.2.45",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/compiler-sfc": "^3.5.13",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.29.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.8.0",
-    "prettier": "^2.8.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "prettier": "^3.3.0",
     "ts-node": "^10.9.2",
-    "typescript": "^4.9.4"
+    "typescript": "^5.3.0"
   },
   "eslintConfig": {
     "root": true,
@@ -56,7 +52,8 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "vue/no-v-html": "off"
+      "vue/no-v-html": "off",
+      "vue/multi-word-component-names": "off"
     }
   },
   "prettier": {

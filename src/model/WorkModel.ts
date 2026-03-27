@@ -1,13 +1,22 @@
 class TimeModel {
-  constructor(readonly from: string, readonly to: string) {}
+  constructor(
+    readonly from: string,
+    readonly to: string,
+  ) {}
 }
 
 class CompanyModel {
-  constructor(readonly title: string, readonly url: string) {}
+  constructor(
+    readonly title: string,
+    readonly url: string,
+  ) {}
 }
 
 class ProjectModel {
-  constructor(readonly title: string, readonly url: string) {}
+  constructor(
+    readonly title: string,
+    readonly url: string,
+  ) {}
 }
 
 export default class WorkModel {
@@ -16,21 +25,21 @@ export default class WorkModel {
     readonly time: TimeModel,
     readonly company: CompanyModel,
     readonly experience: string[],
-    readonly projects: ProjectModel[]
+    readonly projects: ProjectModel[],
   ) {}
 
   static load() {
     const cookingCraze = new ProjectModel(
       "Cooking Craze",
-      "https://www.bigfishgames.com/us/en/game/cooking-craze.html"
+      "https://www.bigfishgames.com/us/en/game/cooking-craze.html",
     );
     const megaFarm = new ProjectModel(
       "Mega Farm",
-      "https://matryoshka.com/games-en.html#tribe-rush"
+      "https://matryoshka.com/games-en.html#tribe-rush",
     );
     const cityRescue = new ProjectModel(
       "Rescue Dash",
-      "https://matryoshka.com/games-en.html#city-rescue"
+      "https://matryoshka.com/games-en.html#city-rescue",
     );
     return [
       new WorkModel(
@@ -44,7 +53,7 @@ export default class WorkModel {
           "Improve shared codebase for different projects",
           "Development: .NET, TeamCity, BrainCloud",
         ],
-        [cookingCraze, megaFarm, cityRescue]
+        [cookingCraze, megaFarm, cityRescue],
       ),
       new WorkModel(
         "Senior Developer",
@@ -58,7 +67,7 @@ export default class WorkModel {
           "Code Review",
           "Performance analysis",
         ],
-        [cookingCraze]
+        [cookingCraze],
       ),
       new WorkModel(
         "Middle Developer",
@@ -74,7 +83,7 @@ export default class WorkModel {
           "Optimization",
           "Integration new features on server-side (Java/Spring)",
         ],
-        [cookingCraze]
+        [cookingCraze],
       ),
       new WorkModel(
         "Team Lead",
@@ -89,21 +98,21 @@ export default class WorkModel {
         [
           new ProjectModel(
             "Cartoon Camera",
-            "https://www.youtube.com/watch?v=87CJCjq2ln0"
+            "https://www.youtube.com/watch?v=87CJCjq2ln0",
           ),
           new ProjectModel(
             "Fario Watario",
-            "https://www.youtube.com/watch?v=KX0uPRFfpEg"
+            "https://www.youtube.com/watch?v=KX0uPRFfpEg",
           ),
           new ProjectModel(
             "Mini Boat Chase",
-            "https://www.youtube.com/watch?v=NHWqS1lcSI8"
+            "https://www.youtube.com/watch?v=NHWqS1lcSI8",
           ),
           new ProjectModel(
             "Army Truck 2",
-            "https://www.youtube.com/watch?v=XK9LU4rk8_U"
+            "https://www.youtube.com/watch?v=XK9LU4rk8_U",
           ),
-        ]
+        ],
       ),
     ];
   }

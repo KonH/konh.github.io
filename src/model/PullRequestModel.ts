@@ -3,7 +3,7 @@ export default class PullRequestModel {
     readonly htmlUrl: string,
     readonly title: string,
     readonly createdAt: Date,
-    readonly merged: boolean
+    readonly merged: boolean,
   ) {}
 
   ownerName() {
@@ -20,7 +20,7 @@ export default class PullRequestModel {
       json.HtmlUrl,
       json.Title,
       new Date(json.CreatedAt),
-      json.PullRequest.Merged
+      json.PullRequest.Merged,
     );
   }
 }

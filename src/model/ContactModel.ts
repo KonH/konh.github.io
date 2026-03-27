@@ -2,7 +2,7 @@ export default class ContactModel {
   private constructor(
     readonly title: string,
     readonly url: string,
-    readonly icon: string
+    readonly icon: string,
   ) {}
 
   static load() {
@@ -11,7 +11,7 @@ export default class ContactModel {
       new ContactModel(
         "LinkedIn",
         "https://www.linkedin.com/in/konhit",
-        "linkedin.png"
+        "linkedin.png",
       ),
     ];
   }

@@ -1,5 +1,8 @@
 export default class SkillModel {
-  private constructor(readonly title: string, readonly keys: string[]) {}
+  private constructor(
+    readonly title: string,
+    readonly keys: string[],
+  ) {}
 
   static loadCoreSkills() {
     return [

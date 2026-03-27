@@ -9,7 +9,7 @@ export default class ProjectModel {
     readonly fork: boolean,
     readonly stargazersCount: number,
     readonly updatedAt: Date,
-    readonly archived: boolean
+    readonly archived: boolean,
   ) {
     this.language = language;
   }
@@ -24,7 +24,7 @@ export default class ProjectModel {
       json.Fork,
       json.StargazersCount,
       new Date(json.UpdatedAt),
-      json.Archived
+      json.Archived,
     );
   }
 }
