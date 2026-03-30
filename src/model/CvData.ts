@@ -28,7 +28,7 @@ export const education: EducationEntry[] = [
 export const languages: LanguageEntry[] = [
   { language: "Russian", level: "Native" },
   { language: "English", level: "B2" },
-  { language: "Serbian", level: "A1" },
+  { language: "Serbian", level: "A2" },
 ];
 
 export const pdfContacts: ContactEntry[] = [

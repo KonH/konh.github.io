@@ -5,17 +5,23 @@ import { education, languages, pdfContacts } from "../model/CvData";
 
 function buildHtml(): string {
   const coreSkills = SkillModel.loadCoreSkills();
-  const otherSkills = SkillModel.loadOtherSkills();
   const jobs = WorkModel.loadAll();
 
-  const skillRows = coreSkills
-    .map(([category, skills]) => {
-      const names = skills.map((s) => s.title).join("  ·  ");
-      return `<tr><td class="skill-cat">${category}</td><td class="skill-names">${names}</td></tr>`;
-    })
-    .join("");
+  const col1Categories = ["Game Dev", "Tech", "AI Tools"];
+  const col2Categories = ["Web", "Infrastructure"];
 
-  const otherNames = otherSkills.map((s) => s.title).join(", ");
+  function renderSkillCol(cats: string[]): string {
+    return coreSkills
+      .filter(([cat]) => cats.includes(cat))
+      .map(([category, skills]) => {
+        const names = skills.map((s) => s.title).join(", ");
+        return `<div class="skill-row"><span class="skill-cat">${category}:</span> ${names}</div>`;
+      })
+      .join("");
+  }
+
+  const skillCol1 = renderSkillCol(col1Categories);
+  const skillCol2 = renderSkillCol(col2Categories);
 
   const workRows = jobs
     .map((job) => {
@@ -62,70 +68,61 @@ function buildHtml(): string {
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10pt;
+    font-size: 9.5pt;
     color: #1a1a1a;
     background: #fff;
-    line-height: 1.5;
+    line-height: 1.4;
   }
   a { color: #1a1a1a; text-decoration: none; }
 
   /* Header */
-  .header { text-align: center; margin-bottom: 18px; border-bottom: 2px solid #1a1a1a; padding-bottom: 10px; }
-  .header h1 { font-size: 20pt; font-weight: 700; letter-spacing: -0.02em; }
-  .contacts { margin-top: 5px; font-size: 8.5pt; color: #444; }
+  .header { text-align: center; margin-bottom: 12px; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; }
+  .header h1 { font-size: 18pt; font-weight: 700; letter-spacing: -0.02em; }
+  .contacts { margin-top: 4px; font-size: 8pt; color: #444; }
   .contact-item { color: #444; }
-  .contact-sep { margin: 0 6px; color: #aaa; }
+  .contact-sep { margin: 0 5px; color: #aaa; }
 
   /* Section headings */
-  .section { margin-bottom: 16px; }
+  .section { margin-bottom: 10px; }
   .section-title {
-    font-size: 8pt;
+    font-size: 7.5pt;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: #555;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 3px;
-    margin-bottom: 8px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
   }
 
   /* Skills */
-  .skills-table { width: 100%; border-collapse: collapse; }
-  .skill-cat {
-    font-size: 8pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #555;
-    width: 18%;
-    padding: 2px 8px 2px 0;
-    vertical-align: top;
-  }
-  .skill-names { font-size: 9.5pt; color: #1a1a1a; padding: 2px 0; }
-  .other-skills { font-size: 9pt; color: #444; margin-top: 4px; }
+  .skills-cols { display: flex; gap: 24px; font-size: 9pt; color: #1a1a1a; line-height: 1.6; }
+  .skills-col { flex: 1; }
+  .skill-row { margin-bottom: 1px; }
+  .skill-cat { font-weight: 700; color: #333; }
 
   /* Work */
-  .job { margin-bottom: 12px; }
+  .job { margin-bottom: 8px; }
   .job-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
-  .job-title { font-weight: 700; font-size: 10pt; }
-  .job-company { font-size: 9pt; color: #444; margin-left: 6px; }
+  .job-title { font-weight: 700; font-size: 9.5pt; }
+  .job-company { font-size: 8.5pt; color: #444; margin-left: 5px; }
   .job-company a { color: #444; }
-  .job-period { font-size: 8.5pt; color: #666; white-space: nowrap; margin-left: 8px; }
-  .job ul { margin-left: 16px; }
-  .job li { font-size: 9pt; color: #333; margin-bottom: 1px; }
+  .job-period { font-size: 8pt; color: #666; white-space: nowrap; margin-left: 8px; }
+  .job ul { margin-left: 14px; }
+  .job li { font-size: 8.5pt; color: #333; margin-bottom: 0; }
 
   /* Education */
-  .edu-row { font-size: 9.5pt; }
+  .edu-row { font-size: 9pt; }
   .edu-inst { font-weight: 600; }
-  .edu-period { color: #666; font-size: 8.5pt; margin-left: 6px; }
+  .edu-period { color: #666; font-size: 8pt; margin-left: 6px; }
 
   /* Languages */
-  .lang-item { margin-right: 16px; font-size: 9.5pt; }
+  .lang-item { margin-right: 14px; font-size: 9pt; }
 </style>
 </head>
 <body>
@@ -136,8 +133,10 @@ function buildHtml(): string {
 
   <div class="section">
     <div class="section-title">Skills</div>
-    <table class="skills-table">${skillRows}</table>
-    <div class="other-skills"><em>Also:</em> ${otherNames}</div>
+    <div class="skills-cols">
+      <div class="skills-col">${skillCol1}</div>
+      <div class="skills-col">${skillCol2}</div>
+    </div>
   </div>
 
   <div class="section">
@@ -173,7 +172,7 @@ async function generate(): Promise<void> {
     path: "public/Konstantin_Khitrykh_CV.pdf",
     format: "A4",
     printBackground: true,
-    margin: { top: "16mm", right: "16mm", bottom: "16mm", left: "16mm" },
+    margin: { top: "12mm", right: "14mm", bottom: "12mm", left: "14mm" },
   });
 
   await browser.close();
