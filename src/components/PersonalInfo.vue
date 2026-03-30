@@ -12,6 +12,7 @@
     <p class="role"><span class="prompt">~/</span> Senior Software Engineer</p>
 
     <div class="tags">
+      <span class="tag">C++</span>
       <span class="tag">Unity</span>
       <span class="tag">C#</span>
       <span class="tag">ASP.NET Core</span>
@@ -21,15 +22,15 @@
 
     <div class="bio">
       <p>
-        Experienced technology expert with a focus on Unity, C#, and ASP.NET
-        Core. My expertise includes developing core game features, analytics
-        services, custom SDKs, admin tools, and integrating plugins and BaaS
-        solutions.
+        Software engineer with 13+ years of experience, specializing in C++ and
+        C# across mobile game development and backend systems. Currently at
+        Playrix, working on core gameplay in C++ with active use of AI-assisted
+        workflows for prototyping, code generation, and review.
       </p>
       <p>
-        Skilled in infrastructure management using Docker and AWS, CI/CD
-        pipelines with TeamCity, and prioritizing code quality through code
-        review. Open-Source Software enthusiast with an active
+        Deep C# background across Unity game development and ASP.NET Core
+        services — including custom SDK design and a high-throughput analytics
+        backend. Open-source contributor with an active
         <a href="https://github.com/KonH" target="_blank">GitHub profile</a>.
       </p>
     </div>
@@ -62,8 +63,8 @@
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-value accent">C#</span>
-        <span class="stat-label">Primary Lang</span>
+        <span class="stat-value accent">C++, C#</span>
+        <span class="stat-label">Core Languages</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
