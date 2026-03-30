@@ -164,20 +164,20 @@ async function generate(): Promise<void> {
   const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
   const browser = await puppeteer.launch({
     ...(executablePath ? { executablePath } : {}),
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
   });
 
   const page = await browser.newPage();
   await page.setContent(html, { waitUntil: "networkidle0" });
   await page.pdf({
-    path: "dist/Konstantin_Khitrykh_CV.pdf",
+    path: "public/Konstantin_Khitrykh_CV.pdf",
     format: "A4",
     printBackground: true,
     margin: { top: "16mm", right: "16mm", bottom: "16mm", left: "16mm" },
   });
 
   await browser.close();
-  console.log("CV PDF generated: dist/Konstantin_Khitrykh_CV.pdf");
+  console.log("CV PDF generated: public/Konstantin_Khitrykh_CV.pdf");
 }
 
 generate().catch((err) => {
