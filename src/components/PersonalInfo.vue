@@ -43,6 +43,7 @@
         Resume ↗
       </a>
       <router-link to="/skills" class="btn btn-secondary">Skills</router-link>
+      <router-link to="/work" class="btn btn-secondary">Work</router-link>
       <router-link to="/projects" class="btn btn-secondary"
         >Projects</router-link
       >

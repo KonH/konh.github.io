@@ -1,35 +1,35 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import PersonalInfo from "@/components/PersonalInfo.vue";
-import SkillList from "@/components/SkillList.vue";
-import ProjectList from "@/components/ProjectList.vue";
-import PullRequestList from "@/components/PullRequestList.vue";
-import ContactList from "@/components/ContactList.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Home",
-    component: PersonalInfo,
+    component: () => import("@/components/PersonalInfo.vue"),
   },
   {
     path: "/skills",
     name: "Skills",
-    component: SkillList,
+    component: () => import("@/components/SkillList.vue"),
+  },
+  {
+    path: "/work",
+    name: "Work",
+    component: () => import("@/components/WorkHistory.vue"),
   },
   {
     path: "/projects",
     name: "Projects",
-    component: ProjectList,
+    component: () => import("@/components/ProjectList.vue"),
   },
   {
     path: "/pull_requests",
     name: "PullRequests",
-    component: PullRequestList,
+    component: () => import("@/components/PullRequestList.vue"),
   },
   {
     path: "/contacts",
     name: "Contacts",
-    component: ContactList,
+    component: () => import("@/components/ContactList.vue"),
   },
 ];
 

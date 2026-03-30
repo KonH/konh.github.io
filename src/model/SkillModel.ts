@@ -7,8 +7,15 @@ export default class SkillModel {
   static loadCoreSkills() {
     return [
       [
-        "Game Engines",
+        "Game Dev",
         [
+          new SkillModel("C++", [
+            "Core gameplay systems for large-scale mobile projects at Playrix",
+            "ECS engine migration — architecture & performance improvements",
+            "Client-server systems: data flow and performance optimization",
+            "Internal tooling to reduce iteration time",
+            "Profiling with Tracy",
+          ]),
           new SkillModel("Unity", [
             "Platforms: Android, iOS, WebGL, tvOS, macOS",
             "Stores (in-apps, social): Google Play, AppStore, Amazon",
@@ -77,6 +84,20 @@ export default class SkillModel {
         ],
       ],
       [
+        "AI Tools",
+        [
+          new SkillModel("Anthropic Claude", [
+            "AI-assisted workflows for prototyping, code generation, and code review",
+            "Custom prompting rules to improve consistency and development speed",
+            "Integrated into daily development loop at Playrix",
+          ]),
+          new SkillModel("Cursor AI", [
+            "AI-assisted code editor used for C++ and tooling work",
+            "Introduced to team as part of AI workflow initiative",
+          ]),
+        ],
+      ],
+      [
         "Infrastructure",
         [
           new SkillModel("TeamCity", [
@@ -94,9 +115,13 @@ export default class SkillModel {
 
   static loadOtherSkills() {
     return [
-      new SkillModel("C++", [
-        "University project: student test system (QT, file encryption)",
-        'Coursera course: <a href="https://www.coursera.org/account/accomplishments/certificate/GWL2W8YZJARQ" target="_blank">Основы разработки на C++: белый пояс</a>',
+      new SkillModel("Lua", [
+        "Scripting within C++ game engine at Playrix",
+        "Gameplay logic and data configuration",
+      ]),
+      new SkillModel("Tracy", [
+        "Frame profiler used for C++ performance analysis",
+        "Identifying CPU bottlenecks in gameplay and engine systems",
       ]),
       new SkillModel("Machine learning", [
         "Algorithms knowledge: decision trees, logistic regression, gradient boosting, neural networks",

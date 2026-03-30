@@ -10,6 +10,7 @@
         <nav class="desktop-nav" aria-label="Main navigation">
           <router-link to="/">Home</router-link>
           <router-link to="/skills">Skills</router-link>
+          <router-link to="/work">Work</router-link>
           <router-link to="/projects">Projects</router-link>
           <router-link to="/pull_requests">Pull Requests</router-link>
           <router-link to="/contacts">Contacts</router-link>
@@ -32,6 +33,7 @@
       >
         <router-link to="/" @click="closeMenu">Home</router-link>
         <router-link to="/skills" @click="closeMenu">Skills</router-link>
+        <router-link to="/work" @click="closeMenu">Work</router-link>
         <router-link to="/projects" @click="closeMenu">Projects</router-link>
         <router-link to="/pull_requests" @click="closeMenu"
           >Pull Requests</router-link

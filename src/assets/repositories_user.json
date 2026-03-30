@@ -63,10 +63,10 @@
     "HtmlUrl": "https://github.com/KonH/AnalyticsPipeline",
     "Name": "AnalyticsPipeline",
     "Description": "The opinionated approach combines a client-side SDK, operative \u002B historical data storage, and a data mart",
-    "Language": null,
+    "Language": "ShaderLab",
     "Fork": false,
-    "StargazersCount": 1,
-    "UpdatedAt": "2024-03-05T12:31:46+00:00",
+    "StargazersCount": 2,
+    "UpdatedAt": "2024-08-07T06:47:39+00:00",
     "Archived": false
   },
   {
@@ -87,6 +87,16 @@
     "Fork": true,
     "StargazersCount": 1,
     "UpdatedAt": "2023-11-09T07:54:42+00:00",
+    "Archived": false
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/Arch.Unity",
+    "Name": "Arch.Unity",
+    "Description": "Arch ECS integration for Unity.",
+    "Language": "C#",
+    "Fork": true,
+    "StargazersCount": 1,
+    "UpdatedAt": "2025-10-25T09:06:49+00:00",
     "Archived": false
   },
   {
@@ -205,8 +215,8 @@
     "Description": ".NET Core file backup tool",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 3,
-    "UpdatedAt": "2021-11-02T10:51:09+00:00",
+    "StargazersCount": 4,
+    "UpdatedAt": "2025-05-04T14:27:19+00:00",
     "Archived": false
   },
   {
@@ -270,6 +280,16 @@
     "Archived": true
   },
   {
+    "HtmlUrl": "https://github.com/KonH/CarGame",
+    "Name": "CarGame",
+    "Description": null,
+    "Language": null,
+    "Fork": false,
+    "StargazersCount": 0,
+    "UpdatedAt": "2025-07-27T12:30:27+00:00",
+    "Archived": false
+  },
+  {
     "HtmlUrl": "https://github.com/KonH/Cataclysm-DDA",
     "Name": "Cataclysm-DDA",
     "Description": "Cataclysm - Dark Days Ahead. A turn-based survival game set in a post-apocalyptic world.",
@@ -315,8 +335,8 @@
     "Description": "Unfinished prototype of city manager",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 5,
-    "UpdatedAt": "2024-03-01T13:38:23+00:00",
+    "StargazersCount": 6,
+    "UpdatedAt": "2025-05-10T15:07:29+00:00",
     "Archived": false
   },
   {
@@ -585,8 +605,18 @@
     "Description": "Unfinished Unity LeoECS prototype game",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 6,
-    "UpdatedAt": "2023-10-07T16:01:50+00:00",
+    "StargazersCount": 5,
+    "UpdatedAt": "2025-05-02T10:19:39+00:00",
+    "Archived": false
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/EconomicsGame2",
+    "Name": "EconomicsGame2",
+    "Description": null,
+    "Language": "C#",
+    "Fork": false,
+    "StargazersCount": 1,
+    "UpdatedAt": "2025-11-17T20:06:19+00:00",
     "Archived": false
   },
   {
@@ -597,6 +627,16 @@
     "Fork": true,
     "StargazersCount": 0,
     "UpdatedAt": "2021-10-18T13:58:05+00:00",
+    "Archived": false
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/EcsSampleProject",
+    "Name": "EcsSampleProject",
+    "Description": "Test project for C\u002B\u002B ECS usage experiments",
+    "Language": "C\u002B\u002B",
+    "Fork": false,
+    "StargazersCount": 1,
+    "UpdatedAt": "2025-02-10T19:51:45+00:00",
     "Archived": false
   },
   {
@@ -726,7 +766,7 @@
     "Language": "C#",
     "Fork": false,
     "StargazersCount": 2,
-    "UpdatedAt": "2024-03-14T20:07:15+00:00",
+    "UpdatedAt": "2025-12-09T11:27:01+00:00",
     "Archived": false
   },
   {
@@ -795,8 +835,8 @@
     "Description": "Shared codebase for game projects to speed up prototyping \u0026 development process",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 6,
-    "UpdatedAt": "2024-02-28T13:35:59+00:00",
+    "StargazersCount": 7,
+    "UpdatedAt": "2025-12-09T11:28:54+00:00",
     "Archived": true
   },
   {
@@ -875,8 +915,8 @@
     "Description": "Avalonia MVVM desktop personal investment dashboard",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 6,
-    "UpdatedAt": "2024-02-14T14:36:51+00:00",
+    "StargazersCount": 8,
+    "UpdatedAt": "2025-09-14T16:19:18+00:00",
     "Archived": false
   },
   {
@@ -933,10 +973,10 @@
     "HtmlUrl": "https://github.com/KonH/konh.github.io",
     "Name": "konh.github.io",
     "Description": "Personal site",
-    "Language": "TypeScript",
+    "Language": "Vue",
     "Fork": false,
     "StargazersCount": 1,
-    "UpdatedAt": "2023-08-28T11:24:50+00:00",
+    "UpdatedAt": "2026-03-27T19:20:41+00:00",
     "Archived": false
   },
   {
@@ -1005,8 +1045,8 @@
     "Description": "\u0421\u043A\u0440\u0438\u043F\u0442 \u0434\u043B\u044F \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0430 \u043F\u0440\u043E\u0447\u0438\u0442\u0430\u043D\u043D\u043E\u0433\u043E \u043D\u0430 Livelib \u0432 CSV-\u0444\u0430\u0439\u043B",
     "Language": "Python",
     "Fork": false,
-    "StargazersCount": 35,
-    "UpdatedAt": "2024-02-05T09:17:14+00:00",
+    "StargazersCount": 49,
+    "UpdatedAt": "2026-02-03T19:14:51+00:00",
     "Archived": false
   },
   {
@@ -1065,8 +1105,8 @@
     "Description": "Roslyn analyzers for Unity game developers",
     "Language": "C#",
     "Fork": true,
-    "StargazersCount": 1,
-    "UpdatedAt": "2020-05-16T05:26:38+00:00",
+    "StargazersCount": 2,
+    "UpdatedAt": "2024-05-10T08:40:08+00:00",
     "Archived": false
   },
   {
@@ -1260,6 +1300,16 @@
     "Archived": false
   },
   {
+    "HtmlUrl": "https://github.com/KonH/PuzzleEnglish-Dictionary-Exporter",
+    "Name": "PuzzleEnglish-Dictionary-Exporter",
+    "Description": "A Tampermonkey userscript that exports PuzzleEnglish dictionary words and translations into JSON and TXT files",
+    "Language": "JavaScript",
+    "Fork": false,
+    "StargazersCount": 1,
+    "UpdatedAt": "2025-02-03T20:51:23+00:00",
+    "Archived": false
+  },
+  {
     "HtmlUrl": "https://github.com/KonH/pvs-studio-check-list",
     "Name": "pvs-studio-check-list",
     "Description": "Offer an interesting project for PVS-Studio analysis.",
@@ -1333,10 +1383,10 @@
     "HtmlUrl": "https://github.com/KonH/serbian-playground",
     "Name": "serbian-playground",
     "Description": "Web playground for Serbian language learning",
-    "Language": "Vue",
+    "Language": "TypeScript",
     "Fork": false,
     "StargazersCount": 1,
-    "UpdatedAt": "2023-11-13T11:25:53+00:00",
+    "UpdatedAt": "2025-10-04T10:43:33+00:00",
     "Archived": false
   },
   {
@@ -1400,6 +1450,16 @@
     "Archived": false
   },
   {
+    "HtmlUrl": "https://github.com/KonH/SmartReader",
+    "Name": "SmartReader",
+    "Description": "Personalized news aggregator that reads RSS and Telegram, scores and summarizes articles with AI, and learns   your interests from feedback",
+    "Language": "Python",
+    "Fork": false,
+    "StargazersCount": 1,
+    "UpdatedAt": "2026-03-15T16:19:32+00:00",
+    "Archived": false
+  },
+  {
     "HtmlUrl": "https://github.com/KonH/SpringGameServer",
     "Name": "SpringGameServer",
     "Description": "TypeScript/Java client/server game project",
@@ -1415,8 +1475,8 @@
     "Description": "Editor utility to generate assets in Unity Editor via self-hosted \u0026 managed Stable Diffusion installations",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 53,
-    "UpdatedAt": "2024-03-19T12:03:42+00:00",
+    "StargazersCount": 66,
+    "UpdatedAt": "2026-02-08T22:18:15+00:00",
     "Archived": false
   },
   {
@@ -1435,8 +1495,8 @@
     "Description": "Roslyn analyzers to track custom event manager subscriptions",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 1,
-    "UpdatedAt": "2021-12-09T10:29:32+00:00",
+    "StargazersCount": 2,
+    "UpdatedAt": "2024-09-27T12:19:18+00:00",
     "Archived": false
   },
   {
@@ -1455,8 +1515,8 @@
     "Description": "Implementation of classic Tetris game using Unity engine",
     "Language": "ShaderLab",
     "Fork": false,
-    "StargazersCount": 6,
-    "UpdatedAt": "2024-01-20T12:55:37+00:00",
+    "StargazersCount": 7,
+    "UpdatedAt": "2025-04-04T04:24:33+00:00",
     "Archived": false
   },
   {
@@ -1506,7 +1566,7 @@
     "Language": "C#",
     "Fork": false,
     "StargazersCount": 7,
-    "UpdatedAt": "2024-02-28T13:34:44+00:00",
+    "UpdatedAt": "2025-12-09T11:27:08+00:00",
     "Archived": true
   },
   {
@@ -1535,9 +1595,9 @@
     "Description": "Template for Unity game projects",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 39,
-    "UpdatedAt": "2024-03-01T02:41:20+00:00",
-    "Archived": false
+    "StargazersCount": 40,
+    "UpdatedAt": "2025-07-30T07:03:35+00:00",
+    "Archived": true
   },
   {
     "HtmlUrl": "https://github.com/KonH/UDBaseExample",
@@ -1587,6 +1647,16 @@
     "Fork": true,
     "StargazersCount": 0,
     "UpdatedAt": "2018-04-11T14:52:19+00:00",
+    "Archived": false
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/unity-mcp",
+    "Name": "unity-mcp",
+    "Description": "A Unity MCP server that allows MCP clients like Claude Desktop or Cursor to perform Unity Editor actions.",
+    "Language": "C#",
+    "Fork": true,
+    "StargazersCount": 1,
+    "UpdatedAt": "2025-07-31T16:03:44+00:00",
     "Archived": false
   },
   {
@@ -1735,8 +1805,8 @@
     "Description": "Unity Cache examples for https://habrahabr.ru/post/303562/",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 13,
-    "UpdatedAt": "2023-10-19T08:09:58+00:00",
+    "StargazersCount": 14,
+    "UpdatedAt": "2025-02-01T10:22:33+00:00",
     "Archived": false
   },
   {
@@ -1755,8 +1825,8 @@
     "Description": "Unity Android native crash analyzer using .NET Core console utility",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 10,
-    "UpdatedAt": "2023-07-23T11:36:33+00:00",
+    "StargazersCount": 13,
+    "UpdatedAt": "2025-01-15T08:32:55+00:00",
     "Archived": false
   },
   {
@@ -1895,8 +1965,8 @@
     "Description": "Roslyn code analyzer to find method usages on scenes",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 8,
-    "UpdatedAt": "2024-02-28T13:34:22+00:00",
+    "StargazersCount": 9,
+    "UpdatedAt": "2025-12-09T11:27:34+00:00",
     "Archived": true
   },
   {
@@ -1905,8 +1975,8 @@
     "Description": "Unity editor tool which allow you to replace object name parts with another values and works with multiple objects simultaneously",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 16,
-    "UpdatedAt": "2023-01-16T17:30:42+00:00",
+    "StargazersCount": 18,
+    "UpdatedAt": "2024-08-30T01:45:43+00:00",
     "Archived": false
   },
   {
@@ -1945,8 +2015,8 @@
     "Description": "Tech demo project to cover game features using modern tools",
     "Language": "C#",
     "Fork": false,
-    "StargazersCount": 1,
-    "UpdatedAt": "2022-12-17T18:33:26+00:00",
+    "StargazersCount": 2,
+    "UpdatedAt": "2024-08-03T19:43:15+00:00",
     "Archived": false
   },
   {
@@ -1975,8 +2045,8 @@
     "Description": "Samples to cover VContainer basic usage",
     "Language": "ShaderLab",
     "Fork": false,
-    "StargazersCount": 10,
-    "UpdatedAt": "2024-02-20T21:51:30+00:00",
+    "StargazersCount": 28,
+    "UpdatedAt": "2026-02-21T05:43:59+00:00",
     "Archived": false
   },
   {
@@ -2037,6 +2107,16 @@
     "Fork": true,
     "StargazersCount": 0,
     "UpdatedAt": "2018-01-27T14:13:35+00:00",
+    "Archived": false
+  },
+  {
+    "HtmlUrl": "https://github.com/KonH/YetAnotherUnityTestProject",
+    "Name": "YetAnotherUnityTestProject",
+    "Description": null,
+    "Language": null,
+    "Fork": false,
+    "StargazersCount": 1,
+    "UpdatedAt": "2025-03-17T17:07:06+00:00",
     "Archived": false
   },
   {
