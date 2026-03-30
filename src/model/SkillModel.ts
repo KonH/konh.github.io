@@ -4,7 +4,7 @@ export default class SkillModel {
     readonly keys: string[],
   ) {}
 
-  static loadCoreSkills() {
+  static loadCoreSkills(): [string, SkillModel[]][] {
     return [
       [
         "Game Dev",

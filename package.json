@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && ts-node ./src/scripts/postbuild.ts",
+    "build": "vue-cli-service build && ts-node ./src/scripts/postbuild.ts && ts-node ./src/scripts/generatePdf.ts",
     "lint": "vue-cli-service lint",
     "refresh_all_projects": "npm run refresh_projects_user && npm run refresh_projects_gjdt && npm run refresh_projects_tuc",
     "refresh_projects_user": "cross-env-shell \"dotnet tool update -g GithubExplorer.CommandLine && github_explorer --target repositories --accessToken $GH_ACCESS_TOKEN --username KonH --output src/assets/repositories_user.json --filter \"HtmlUrl;Name;Description;Language;Fork;StargazersCount;UpdatedAt;Archived;\"\"",
@@ -32,6 +32,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.28.0",
     "prettier": "^3.3.0",
+    "puppeteer": "^24.40.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.0"
   },
