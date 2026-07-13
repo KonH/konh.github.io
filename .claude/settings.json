@@ -1,4 +1,7 @@
 {
+  "enabledPlugins": {
+    "k@claude-tools": true
+  },
   "extraKnownMarketplaces": {
     "claude-tools": {
       "source": {
@@ -6,8 +9,5 @@
         "repo": "KonH/ClaudeTools"
       }
     }
-  },
-  "enabledPlugins": {
-    "k@claude-tools": true
   }
 }
