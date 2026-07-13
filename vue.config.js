@@ -7,7 +7,7 @@ module.exports = {
   },
   configureWebpack: {
     performance: {
-      maxAssetSize: 500000 // Increase max asset size to 500KB
-    }
-  }
+      maxAssetSize: 500000, // Increase max asset size to 500KB
+    },
+  },
 };
