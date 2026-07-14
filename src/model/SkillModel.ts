@@ -90,6 +90,7 @@ export default class SkillModel {
             "AI-assisted workflows for prototyping, code generation, and code review",
             "Custom prompting rules to improve consistency and development speed",
             "Integrated into daily development loop at Playrix",
+            "Agents, skills, PRD, Ralph-loop approach",
           ]),
           new SkillModel("Cursor AI", [
             "AI-assisted code editor used for C++ and tooling work",
