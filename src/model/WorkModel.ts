@@ -21,6 +21,9 @@ export default class WorkModel {
         current: true,
         bullets: [
           "Developed core gameplay systems in C++ for a large-scale mobile project",
+          "Prototyped new gameplay and UI features and adapted existing features from other company projects to the current codebase",
+          "Built and configured production-ready UI using visual scripting and layout tools, including importing and adapting interface designs from Figma",
+          "Integrated game-balance configurations exported from Google Sheets into the project",
           "Contributed to ECS engine migration, improving architecture and performance",
           "Built internal tools to streamline development workflows and reduce iteration time",
           "Worked on client-server systems, focusing on data flow and performance",

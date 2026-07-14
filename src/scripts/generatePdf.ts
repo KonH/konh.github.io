@@ -25,9 +25,7 @@ function buildHtml(): string {
 
   const workRows = jobs
     .map((job) => {
-      const bullets = job.bullets
-        .map((b) => `<li>${b}</li>`)
-        .join("");
+      const bullets = job.bullets.map((b) => `<li>${b}</li>`).join("");
       const companyLink = job.url
         ? `<a href="${job.url}">${job.company}</a>`
         : job.company;
@@ -53,7 +51,10 @@ function buildHtml(): string {
     .join("");
 
   const langItems = languages
-    .map((l) => `<span class="lang-item"><strong>${l.language}</strong> ${l.level}</span>`)
+    .map(
+      (l) =>
+        `<span class="lang-item"><strong>${l.language}</strong> ${l.level}</span>`,
+    )
     .join("");
 
   const contactItems = pdfContacts
@@ -167,7 +168,7 @@ async function generate(): Promise<void> {
   });
 
   const page = await browser.newPage();
-  await page.setContent(html, { waitUntil: "networkidle0" });
+  await page.setContent(html, { waitUntil: "load" });
   await page.pdf({
     path: "public/Konstantin_Khitrykh_CV.pdf",
     format: "A4",

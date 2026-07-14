@@ -1,0 +1,13 @@
+{
+  "enabledPlugins": {
+    "k@claude-tools": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-tools": {
+      "source": {
+        "source": "github",
+        "repo": "KonH/ClaudeTools"
+      }
+    }
+  }
+}
