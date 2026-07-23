@@ -12,10 +12,12 @@
     <p class="role"><span class="prompt">~/</span> Senior Software Engineer</p>
 
     <div class="tags">
-      <span class="tag">C++</span>
       <span class="tag">Unity</span>
       <span class="tag">C#</span>
-      <span class="tag">ASP.NET Core</span>
+      <span class="tag">C++</span>
+      <span class="tag">Claude</span>
+      <span class="tag">Codex</span>
+      <span class="tag">Cursor</span>
       <span class="tag">Docker</span>
       <span class="tag">AWS</span>
     </div>
@@ -63,8 +65,13 @@
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-value accent">C++, C#</span>
+        <span class="stat-value accent">C#, C++</span>
         <span class="stat-label">Core Languages</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value accent">Claude, Codex, Cursor</span>
+        <span class="stat-label">AI tools</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
