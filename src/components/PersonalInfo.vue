@@ -41,7 +41,7 @@
 
     <div class="actions">
       <a
-        href="/Konstantin_Khitrykh_CV.pdf"
+        :href="`/Konstantin_Khitrykh_CV.pdf?v=${CV_VERSION}`"
         target="_blank"
         class="btn btn-primary"
       >
@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-// No logic needed — purely presentational
+import { CV_VERSION } from "@/model/CvVersion";
 </script>
 
 <style scoped>
