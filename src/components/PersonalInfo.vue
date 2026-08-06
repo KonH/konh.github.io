@@ -62,7 +62,7 @@
 
     <div class="quick-stats">
       <div class="stat">
-        <span class="stat-value accent">Unity</span>
+        <span class="stat-value accent">Unity, Godot</span>
         <span class="stat-label">Game Dev</span>
       </div>
       <div class="stat-divider"></div>
