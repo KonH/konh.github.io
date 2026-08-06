@@ -9,15 +9,8 @@ export default class SkillModel {
       [
         "Game Dev",
         [
-          new SkillModel("C++", [
-            "Core gameplay systems for large-scale mobile projects at Playrix",
-            "ECS engine migration — architecture & performance improvements",
-            "Client-server systems: data flow and performance optimization",
-            "Internal tooling to reduce iteration time",
-            "Profiling with Tracy",
-          ]),
           new SkillModel("Unity", [
-            "Platforms: Android, iOS, WebGL, tvOS, macOS",
+            "Platforms: Android, iOS, WebGL, tvOS, macOS, Windows",
             "Stores (in-apps, social): Google Play, AppStore, Amazon",
             "Plugins: Crashlytics, Facebook, Google Analytics, Vuforia etc",
             "Services: BrainCloud",
@@ -31,12 +24,16 @@ export default class SkillModel {
             'Udemy <a href="https://www.udemy.com/certificate/UC-e7b98c69-9c9a-411d-85fb-05e5a296c3f6/" target="_blank">Unity 2019 Learn to write better code making a City Builder</a>',
             'Udemy <a href="https://www.udemy.com/certificate/UC-9db5ceca-ef3a-4305-bff2-d43eba3d0f15/" target="_blank">RPG Core Combat Creator: Learn Intermediate Unity C# Coding</a>',
           ]),
+          new SkillModel("Godot", [
+            "Platforms: standalone",
+            "Pet projects to test different tech",
+          ]),
         ],
       ],
       [
         "Tech",
         [
-          new SkillModel(".NET/C#", [
+          new SkillModel(".C#", [
             "Platforms: .NET Framework, .NET Core, Mono",
             "Frameworks: ASP.NET Core (WebAPI/MVC), ASP.NET (MVC), WinForms, WPF",
             "Targets: console, standalone, web applications",
@@ -51,12 +48,6 @@ export default class SkillModel {
             'Udemy <a href="https://www.udemy.com/certificate/UC-8bd7c2c4-b51b-44d6-b509-a9e073fdd12a/" target="_blank">Advanced Topics in C#</a>',
             'Udemy <a href="https://www.udemy.com/certificate/UC-609b535d-ad50-42f6-bf0e-8c337e760dd0/" target="_blank">C# Performance Tricks: How To Radically Speed Up Your Code</a>',
           ]),
-          new SkillModel("Tech Leadership", [
-            'Podlodka <a href="https://s3.eu-north-1.amazonaws.com/podlodka.crew.cert/techlead1/cert_techlead_1_konh%40yandex.ru.png">TechLead Crew #1</a>',
-            "Podlodka TechLead Crew #2",
-            'Podlodka <a href="https://certificate.podlodka.io/techlead5/en/pdldk3a997d4d9a5d377538e4add4e0d232a4.png">TechLead Crew #5</a>',
-            'Podlodka <a href="https://certificate.podlodka.io/teamlead12/en/pdldk90482eb53b0e3c35a22f1907f05524e6.png">Teamlead Crew #12</a>',
-          ]),
           new SkillModel("Java", [
             "Developing new features for high-load game server based on Spring and MySQL/MongoDB",
             "University project: mobile app for counting expected lifetime based on bad habits and activity",
@@ -65,6 +56,12 @@ export default class SkillModel {
           new SkillModel("Kotlin", [
             "TeamCity DSL usage: 10 projects, 100 build configurations based on shared codebase",
             'Develop Android <a href="https://github.com/KonH/MyContract" target="_blank">app</a> for self-motivation',
+          ]),
+          new SkillModel("Tech Leadership", [
+            'Podlodka <a href="https://s3.eu-north-1.amazonaws.com/podlodka.crew.cert/techlead1/cert_techlead_1_konh%40yandex.ru.png">TechLead Crew #1</a>',
+            "Podlodka TechLead Crew #2",
+            'Podlodka <a href="https://certificate.podlodka.io/techlead5/en/pdldk3a997d4d9a5d377538e4add4e0d232a4.png">TechLead Crew #5</a>',
+            'Podlodka <a href="https://certificate.podlodka.io/teamlead12/en/pdldk90482eb53b0e3c35a22f1907f05524e6.png">Teamlead Crew #12</a>',
           ]),
         ],
       ],
@@ -95,6 +92,10 @@ export default class SkillModel {
           new SkillModel("Cursor AI", [
             "AI-assisted code editor used for C++ and tooling work",
             "Introduced to team as part of AI workflow initiative",
+          ]),
+          new SkillModel("OpenAI Codex", [
+            "Use for pet projects to setup AI-assisted feature development spec-based workflow",
+            "Skills, SpecKit, GitHub issue automation",
           ]),
         ],
       ],

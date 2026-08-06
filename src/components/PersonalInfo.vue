@@ -24,16 +24,18 @@
 
     <div class="bio">
       <p>
-        Software engineer with 13+ years of experience, specializing in C++ and
-        C# across mobile game development and backend systems. Currently at
-        Playrix, working on core gameplay in C++ with active use of AI-assisted
-        workflows for prototyping, code generation, and review.
+        Software engineer with 13+ years of experience, specializing in C# and C++
+        C# across mobile game development and backend systems.
       </p>
       <p>
         Deep C# background across Unity game development and ASP.NET Core
         services — including custom SDK design and a high-throughput analytics
         backend. Open-source contributor with an active
         <a href="https://github.com/KonH" target="_blank">GitHub profile</a>.
+      </p>
+      <p>
+        Worked at Playrix, developed core gameplay in C++ with active use of AI-assisted
+        workflows for prototyping, code generation, and review.
       </p>
     </div>
 
