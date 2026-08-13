@@ -33,14 +33,19 @@ export const languages: LanguageEntry[] = [
 
 export const pdfContacts: ContactEntry[] = [
   {
+    label: "Location",
+    value: "Novi Sad, Serbia",
+    href: "",
+  },
+  {
     label: "Email",
     value: "konhit@gmail.com",
     href: "mailto:konhit@gmail.com",
   },
   {
-    label: "Telegram",
-    value: "t.me/konh_hit",
-    href: "https://t.me/konh_hit",
+    label: "Phone",
+    value: "+381 62 9750 407",
+    href: "tel:+381629750407",
   },
   {
     label: "GitHub",

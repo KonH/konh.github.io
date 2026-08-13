@@ -27,6 +27,16 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/components/PullRequestList.vue"),
   },
   {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("@/components/BlogList.vue"),
+  },
+  {
+    path: "/blog/:slug",
+    name: "BlogPost",
+    component: () => import("@/components/BlogPostView.vue"),
+  },
+  {
     path: "/contacts",
     name: "Contacts",
     component: () => import("@/components/ContactList.vue"),

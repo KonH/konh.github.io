@@ -78,7 +78,11 @@ function buildHtml(): string {
     .join("");
 
   const contactItems = pdfContacts
-    .map((c) => `<a href="${c.href}" class="contact-item">${c.value}</a>`)
+    .map((c) =>
+      c.href
+        ? `<a href="${c.href}" class="contact-item">${c.value}</a>`
+        : `<span class="contact-item">${c.value}</span>`,
+    )
     .join('<span class="contact-sep">·</span>');
 
   return `<!DOCTYPE html>

@@ -15,7 +15,7 @@ export default class WorkModel {
       {
         company: "Playrix",
         url: "https://www.playrix.com/",
-        title: "Senior C++ Programmer",
+        title: "Senior C++ Engineer",
         location: "Novi Sad",
         period: "May 2024 — Aug 2026",
         current: true,
@@ -68,7 +68,7 @@ export default class WorkModel {
       {
         company: "Matryoshka Games",
         url: "https://www.matryoshka.com/",
-        title: "Senior Developer",
+        title: "Senior Unity/C# Developer",
         location: "Novosibirsk",
         period: "Apr 2018 — Dec 2020",
         current: false,
@@ -85,7 +85,7 @@ export default class WorkModel {
       {
         company: "Deus Craft",
         url: null,
-        title: "Middle Developer",
+        title: "Middle Unity/C# Developer",
         location: "Novosibirsk",
         period: "Apr 2016 — Apr 2018",
         current: false,
@@ -103,7 +103,7 @@ export default class WorkModel {
       {
         company: "Academ Media",
         url: null,
-        title: "Technical Team Lead",
+        title: "Unity/C# Developer | Technical Team Lead",
         location: "Novosibirsk",
         period: "Jul 2013 — Apr 2016",
         current: false,
