@@ -13,6 +13,7 @@
           <router-link to="/work">Work</router-link>
           <router-link to="/projects">Projects</router-link>
           <router-link to="/pull_requests">Pull Requests</router-link>
+          <router-link to="/blog">Blog</router-link>
           <router-link to="/contacts">Contacts</router-link>
         </nav>
         <button
@@ -38,6 +39,7 @@
         <router-link to="/pull_requests" @click="closeMenu"
           >Pull Requests</router-link
         >
+        <router-link to="/blog" @click="closeMenu">Blog</router-link>
         <router-link to="/contacts" @click="closeMenu">Contacts</router-link>
       </nav>
     </header>

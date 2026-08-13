@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "building-this-portfolio-with-vue",
+    "title": "Building This Portfolio With Vue",
+    "tags": [
+      "vue",
+      "typescript",
+      "webdev"
+    ],
+    "date": "2026-08-13T09:59:15.000Z",
+    "contentHtml": "<p>This site is a Vue 3 + TypeScript single-page app, built with Vue CLI and\ndeployed straight to GitHub Pages from the repo root.</p>\n<h2>Content as code</h2>\n<p>There&#39;s no CMS. Skills, work history, education, contacts — all of it lives\nas typed data in <code>src/model/*.ts</code>. Both the web pages and the generated CV\nPDF read from the same models, so there&#39;s exactly one place to update when\nsomething changes.</p>\n<pre><code class=\"language-ts\">export default class SkillModel {\n  private constructor(\n    readonly title: string,\n    readonly keys: string[],\n  ) {}\n}\n</code></pre>\n<h2>Deploying to a user page</h2>\n<p>GitHub Pages serves user pages (<code>&lt;username&gt;.github.io</code>) straight from the\nrepo root of <code>master</code>, which means the build output has to be committed\nthere directly. A small PowerShell/bash script handles copying <code>dist/*</code> into\nplace after every build.</p>\n<p>Deep links are handled with the classic <code>404.html</code> trick: it&#39;s a copy of\n<code>index.html</code>, and the router picks up a redirect stashed in\n<code>sessionStorage</code> on load.</p>\n",
+    "excerpt": "This site is a Vue 3 + TypeScript single page app, built with Vue CLI and deployed straight to GitHub Pages from the repo root. Content as code There's no CMS. Skills, work…"
+  },
+  {
+    "slug": "notes-on-code-review",
+    "title": "Notes on Code Review",
+    "tags": [
+      "process",
+      "ai-tools",
+      "engineering"
+    ],
+    "date": "2026-08-13T09:59:15.000Z",
+    "contentHtml": "<p>A few things I keep coming back to when reviewing code, whether it&#39;s a\nteammate&#39;s PR or an AI-assisted change.</p>\n<h2>Look for the failure case, not just the happy path</h2>\n<p>The question that catches the most real bugs isn&#39;t &quot;does this work&quot; — it&#39;s\n&quot;what input or state breaks this&quot;. Empty collections, null values, retries,\nconcurrent writes. Most regressions live in the corners nobody exercised in\nthe demo.</p>\n<h2>Keep the diff readable on its own</h2>\n<p>A reviewer shouldn&#39;t need the whole codebase in their head to evaluate a\nchange. If a PR needs a long verbal explanation to make sense, that&#39;s\nusually a sign it should be split up or the code needs a comment explaining\n<em>why</em>, not just <em>what</em>.</p>\n<h2>AI-assisted review is a first pass, not a verdict</h2>\n<p>Tools are good at flagging likely issues quickly and consistently, but\nconfirming them still takes someone who understands the system&#39;s actual\nconstraints. Treat automated findings as a prioritized list to verify, not\nas ground truth.</p>\n",
+    "excerpt": "A few things I keep coming back to when reviewing code, whether it's a teammate's PR or an AI assisted change. Look for the failure case, not just the happy path The question that…"
+  },
+  {
+    "slug": "welcome-to-this-blog",
+    "title": "Welcome to This Blog",
+    "tags": [
+      "meta",
+      "site"
+    ],
+    "date": "2026-08-13T09:59:15.000Z",
+    "contentHtml": "<p>I&#39;ve added a small blog section to this site. Nothing fancy — just a place to\nwrite short notes about things I&#39;m building, tools I&#39;m using, or problems I\nran into recently.</p>\n<h2>Why</h2>\n<p>I already keep the CV and project list here as structured data, so a blog\nmade sense as one more content type instead of standing up a separate site.</p>\n<h2>How it works</h2>\n<p>Every post is a plain Markdown file living in the repo. At build time a small\nscript reads all of them, converts the Markdown to HTML, pulls the\npublication date from git history, and bakes the result into a JSON file the\nsite loads — no backend, no database, no runtime API calls.</p>\n<p>That&#39;s it for the first post. More to come.</p>\n",
+    "excerpt": "I've added a small blog section to this site. Nothing fancy — just a place to write short notes about things I'm building, tools I'm using, or problems I ran into recently. Why I…"
+  }
+]
