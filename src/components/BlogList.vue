@@ -19,7 +19,8 @@
     <div v-if="filteredPosts.length" class="feed">
       <BlogPostCard v-for="p in filteredPosts" :key="p.slug" :model="p" />
     </div>
-    <p v-else class="empty">No posts match this tag yet.</p>
+    <p v-else-if="posts.length" class="empty">No posts match this tag yet.</p>
+    <p v-else class="empty">No posts yet — check back soon.</p>
   </div>
 </template>
 
