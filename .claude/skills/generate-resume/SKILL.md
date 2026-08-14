@@ -42,31 +42,20 @@ of the existing build pipeline.
 
 ## Two copies of the PDF — don't stop at `public/`
 
-The repo carries the resume PDF in two places, and regenerating one does
-**not** update the other:
+The repo also carries a copy of the resume PDF at the **repo root**
+(`Konstantin_Khitrykh_CV.pdf`). GitHub Pages serves this user page from the
+repo root of `master`, not from `public/`, so that root copy — not
+`public/Konstantin_Khitrykh_CV.pdf` — is what's actually live at
+`konh.github.io/Konstantin_Khitrykh_CV.pdf`. Regenerating the PDF only
+writes `public/`; after that, copy it over the root copy too:
 
-- `public/Konstantin_Khitrykh_CV.pdf` — the *source* copy, written by
-  `generatePdf.ts` (steps above). Feeds the webpack build.
-- `Konstantin_Khitrykh_CV.pdf` at the **repo root** — the *deploy* copy.
-  GitHub Pages serves this user page from the repo root of `master`, not
-  from `public/`, so this is the file actually live at
-  `konh.github.io/Konstantin_Khitrykh_CV.pdf`. It only updates when the
-  deploy script runs `npm run build` and then copies `dist/*` (which
-  includes `public/`'s contents) over the repo root.
+```
+cp public/Konstantin_Khitrykh_CV.pdf Konstantin_Khitrykh_CV.pdf
+```
 
-After regenerating the PDF, also refresh the root copy so the change is
-complete:
-
-1. Check the current branch (`git branch --show-current`).
-   - On `master`: run `.\deploy-github.ps1` (Windows) or `./deploy-github.sh`
-     (macOS/Linux) to rebuild and copy `dist/*` — including the CV PDF,
-     `index.html`, `css/`, `js/` — over the repo root.
-   - On a feature branch: deploying here would land unrelated built-site
-     artifacts in a feature branch's diff. Ask the user whether to deploy
-     now anyway or wait until after this branch merges to `master`.
-
-2. `git status --short` again — the deploy script touches the root PDF plus
-   `index.html`, `css/`, `js/`, `img/`; review before committing.
+(A full deploy via `deploy-github.ps1`/`deploy-github.sh` also refreshes
+this file, along with `index.html`/`css/`/`js/`, but for just the resume
+the plain copy above is all that's needed.)
 
 ## Puppeteer/Chrome resolution
 
