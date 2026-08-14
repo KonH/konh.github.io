@@ -46,19 +46,18 @@ function buildHtml(): string {
   const workRows = jobs
     .map((job) => {
       const bullets = job.bullets.map((b) => `<li>${b}</li>`).join("");
-      const companyLink = job.url
-        ? `<a href="${job.url}">${job.company}</a>`
-        : job.company;
-      const companyInfo = job.companyInfo
-        ? `<div class="job-company-info">${job.companyInfo}</div>`
-        : "";
+      const companyName = job.url
+        ? `<a href="${job.url}"><strong>${job.company}</strong></a>`
+        : `<strong>${job.company}</strong>`;
+      const companyLine = job.companyInfo
+        ? `${companyName}: ${job.companyInfo} <span class="job-company-sep">|</span> ${job.location}`
+        : `${companyName} <span class="job-company-sep">·</span> ${job.location}`;
       return `
         <div class="job">
           <div class="job-header">
             <div>
               <span class="job-title">${job.title}</span>
-              <span class="job-company">${companyLink} · ${job.location}</span>
-              ${companyInfo}
+              <div class="job-company">${companyLine}</div>
             </div>
             <span class="job-period">${job.period}</span>
           </div>
@@ -139,9 +138,9 @@ function buildHtml(): string {
     margin-bottom: 2px;
   }
   .job-title { font-weight: 700; font-size: 9.5pt; }
-  .job-company { font-size: 8.5pt; color: #444; margin-left: 5px; }
+  .job-company { font-size: 8.5pt; color: #444; margin-top: 1px; }
   .job-company a { color: #444; }
-  .job-company-info { font-size: 8pt; color: #777; margin-top: 1px; }
+  .job-company-sep { color: #999; margin: 0 3px; }
   .job-period { font-size: 8pt; color: #666; white-space: nowrap; margin-left: 8px; }
   .job ul { margin-left: 14px; }
   .job li { font-size: 8.5pt; color: #333; margin-bottom: 0; }
