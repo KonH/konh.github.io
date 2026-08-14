@@ -31,6 +31,9 @@
                 <span class="separator">·</span>
                 <span class="job-location">{{ job.location }}</span>
               </div>
+              <p v-if="job.companyInfo" class="job-company-info">
+                {{ job.companyInfo }}
+              </p>
             </div>
             <div class="job-period">
               <span class="period-badge" :class="{ current: job.current }">{{
@@ -185,6 +188,13 @@ const jobs = WorkModel.loadAll();
 
 .job-location {
   color: var(--text-muted);
+}
+
+.job-company-info {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  width: 100%;
 }
 
 .period-badge {

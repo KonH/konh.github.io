@@ -1,5 +1,6 @@
 export interface WorkEntry {
   company: string;
+  companyInfo?: string;
   url: string | null;
   title: string;
   location: string;
@@ -14,6 +15,8 @@ export default class WorkModel {
     return [
       {
         company: "Playrix",
+        companyInfo:
+          "#3 mobile game company · 100M+ MAU · 2.3B installs, 12 titles",
         url: "https://www.playrix.com/",
         title: "Senior C++ Engineer",
         location: "Novi Sad",
@@ -42,6 +45,7 @@ export default class WorkModel {
       },
       {
         company: "Matryoshka Games",
+        companyInfo: "80M+ installs, 10 titles",
         url: "https://www.matryoshka.com/",
         title: "Chief Technology Officer",
         location: "Novi Sad",

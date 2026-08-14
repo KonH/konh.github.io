@@ -49,12 +49,15 @@ function buildHtml(): string {
       const companyLink = job.url
         ? `<a href="${job.url}">${job.company}</a>`
         : job.company;
+      const companyInfo = job.companyInfo
+        ? ` <span class="job-company-info">(${job.companyInfo})</span>`
+        : "";
       return `
         <div class="job">
           <div class="job-header">
             <div>
               <span class="job-title">${job.title}</span>
-              <span class="job-company">${companyLink} · ${job.location}</span>
+              <span class="job-company">${companyLink} · ${job.location}${companyInfo}</span>
             </div>
             <span class="job-period">${job.period}</span>
           </div>
@@ -137,6 +140,7 @@ function buildHtml(): string {
   .job-title { font-weight: 700; font-size: 9.5pt; }
   .job-company { font-size: 8.5pt; color: #444; margin-left: 5px; }
   .job-company a { color: #444; }
+  .job-company-info { color: #777; }
   .job-period { font-size: 8pt; color: #666; white-space: nowrap; margin-left: 8px; }
   .job ul { margin-left: 14px; }
   .job li { font-size: 8.5pt; color: #333; margin-bottom: 0; }
