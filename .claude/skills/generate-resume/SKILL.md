@@ -1,6 +1,6 @@
 ---
 name: generate-resume
-description: Regenerate the CV/resume PDF from the current model data (WorkModel, SkillModel, CvData) using the project's build pipeline. Use when work history, skills, education, or other resume content changed in src/model and the shipped PDF at public/Konstantin_Khitrykh_CV.pdf needs to reflect it.
+description: Regenerate the CV/resume PDF from the current model data (WorkModel, SkillModel, CvData) using the project's build pipeline, and refresh the deployed root-level copy GitHub Pages actually serves. Use when work history, skills, education, or other resume content changed in src/model and either public/Konstantin_Khitrykh_CV.pdf or the repo-root Konstantin_Khitrykh_CV.pdf needs to reflect it.
 ---
 
 # Generate Resume
@@ -39,6 +39,34 @@ of the existing build pipeline.
 
    Both files are tracked and get committed — the PDF ships with the build
    (see `Deployment model` in `CLAUDE.md`).
+
+## Two copies of the PDF — don't stop at `public/`
+
+The repo carries the resume PDF in two places, and regenerating one does
+**not** update the other:
+
+- `public/Konstantin_Khitrykh_CV.pdf` — the *source* copy, written by
+  `generatePdf.ts` (steps above). Feeds the webpack build.
+- `Konstantin_Khitrykh_CV.pdf` at the **repo root** — the *deploy* copy.
+  GitHub Pages serves this user page from the repo root of `master`, not
+  from `public/`, so this is the file actually live at
+  `konh.github.io/Konstantin_Khitrykh_CV.pdf`. It only updates when the
+  deploy script runs `npm run build` and then copies `dist/*` (which
+  includes `public/`'s contents) over the repo root.
+
+After regenerating the PDF, also refresh the root copy so the change is
+complete:
+
+1. Check the current branch (`git branch --show-current`).
+   - On `master`: run `.\deploy-github.ps1` (Windows) or `./deploy-github.sh`
+     (macOS/Linux) to rebuild and copy `dist/*` — including the CV PDF,
+     `index.html`, `css/`, `js/` — over the repo root.
+   - On a feature branch: deploying here would land unrelated built-site
+     artifacts in a feature branch's diff. Ask the user whether to deploy
+     now anyway or wait until after this branch merges to `master`.
+
+2. `git status --short` again — the deploy script touches the root PDF plus
+   `index.html`, `css/`, `js/`, `img/`; review before committing.
 
 ## Puppeteer/Chrome resolution
 
