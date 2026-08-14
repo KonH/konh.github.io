@@ -25,7 +25,7 @@ There are no unit tests in this repo.
 
 `npm run build` runs three steps in order (see `package.json`):
 
-1. `src/scripts/generatePdf.ts` — renders the CV as HTML and prints it via Puppeteer to `public/Konstantin_Khitrykh_CV.pdf`, so the PDF ships with the build. Honors `PUPPETEER_EXECUTABLE_PATH` if Chrome isn't downloaded.
+1. `src/scripts/generatePdf.ts` — renders the CV as HTML and prints it via Puppeteer to `public/Konstantin_Khitrykh_CV.pdf`, so the PDF ships with the build. Honors `PUPPETEER_EXECUTABLE_PATH`; otherwise falls back from puppeteer's managed Chrome to a detected system Chrome/Edge install if the managed download is missing or corrupted.
 2. `vue-cli-service build` — webpack build into `dist/`.
 3. `src/scripts/postbuild.ts` — copies `dist/index.html` to `dist/404.html`.
 

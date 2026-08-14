@@ -186,10 +186,48 @@ function buildHtml(): string {
 </html>`;
 }
 
+// Common install locations for a system-wide Chrome/Chromium/Edge, used as a
+// fallback when puppeteer's own managed Chrome download is missing or
+// corrupted (e.g. a partial download left an executable-less folder behind).
+const SYSTEM_BROWSER_CANDIDATES = [
+  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+  "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "/usr/bin/google-chrome",
+  "/usr/bin/chromium-browser",
+  "/usr/bin/chromium",
+];
+
+function resolveExecutablePath(): string | undefined {
+  if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+    return process.env.PUPPETEER_EXECUTABLE_PATH;
+  }
+
+  const managedPath = puppeteer.executablePath();
+  if (managedPath && fs.existsSync(managedPath)) {
+    return undefined; // let puppeteer use its own managed Chrome
+  }
+
+  const systemBrowser = SYSTEM_BROWSER_CANDIDATES.find((p) => fs.existsSync(p));
+  if (systemBrowser) {
+    console.log(
+      `Managed Chrome not found; using system browser: ${systemBrowser}`,
+    );
+    return systemBrowser;
+  }
+
+  console.warn(
+    `Puppeteer's managed Chrome is missing at ${managedPath} and no system browser was found.\n` +
+      "Run `npx puppeteer browsers install chrome` or set PUPPETEER_EXECUTABLE_PATH.",
+  );
+  return undefined;
+}
+
 async function generate(): Promise<void> {
   const html = buildHtml();
 
-  const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+  const executablePath = resolveExecutablePath();
   const browser = await puppeteer.launch({
     ...(executablePath ? { executablePath } : {}),
     args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
