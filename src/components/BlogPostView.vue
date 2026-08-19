@@ -34,13 +34,25 @@
       >
         ×
       </button>
-      <img :src="lightboxSrc" :alt="lightboxAlt" class="lightbox-img" @click="closeLightbox" />
+      <img
+        :src="lightboxSrc"
+        :alt="lightboxAlt"
+        class="lightbox-img"
+        @click="closeLightbox"
+      />
     </div>
   </Teleport>
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onBeforeUnmount, ref, watch } from "vue";
+import {
+  computed,
+  nextTick,
+  onMounted,
+  onBeforeUnmount,
+  ref,
+  watch,
+} from "vue";
 import { useRoute } from "vue-router";
 import BlogPostModel from "@/model/BlogPostModel";
 import TagBadge from "@/components/TagBadge.vue";
@@ -103,7 +115,10 @@ function setupImageExpand() {
     btn.textContent = "⤢";
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      openLightbox(img.getAttribute("src") ?? "", img.getAttribute("alt") ?? "");
+      openLightbox(
+        img.getAttribute("src") ?? "",
+        img.getAttribute("alt") ?? "",
+      );
     });
     wrap.appendChild(btn);
   });
@@ -331,7 +346,9 @@ watch(post, () => {
   align-items: center;
   justify-content: center;
   opacity: 0.55;
-  transition: opacity 0.15s ease, background 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    background 0.15s ease;
 }
 
 .post-content :deep(.img-expand-wrap:hover .img-expand-btn),

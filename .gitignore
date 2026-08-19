@@ -2,6 +2,12 @@
 node_modules
 /dist
 
+# Build-only source for the generated CV PDF (see src/scripts/generatePdf.ts).
+# The deployed copy at the repo root (Konstantin_Khitrykh_CV.pdf) is the one
+# actually committed/served; this is just the build intermediate, so it
+# isn't tracked separately to avoid committing the same PDF bytes twice.
+/public/Konstantin_Khitrykh_CV.pdf
+
 
 # local env files
 .env.local

@@ -77,22 +77,44 @@ function toExcerpt(markdownBody: string): string {
   return plain.slice(0, EXCERPT_LENGTH).replace(/\s+\S*$/, "") + "…";
 }
 
+function loadExistingDates(): Map<string, string> {
+  const dates = new Map<string, string>();
+  if (!fs.existsSync(OUTPUT_PATH)) return dates;
+  try {
+    const existing = JSON.parse(
+      fs.readFileSync(OUTPUT_PATH, "utf-8"),
+    ) as BlogPostJson[];
+    for (const post of existing) dates.set(post.slug, post.date);
+  } catch {
+    // Malformed/missing existing file — treat as no prior state.
+  }
+  return dates;
+}
+
 function generate(): void {
   const files = fs
     .readdirSync(SOURCE_DIR)
     .filter((f) => f.endsWith(".md") && f.toUpperCase() !== "EXAMPLE.MD");
 
+  // Once a post has a recorded date, keep it forever: re-deriving from git
+  // log on every rebuild would bump the "published" date whenever the file
+  // is touched again (e.g. a typo fix), which is exactly what we don't want
+  // for already-published posts.
+  const existingDates = loadExistingDates();
+
   const posts: BlogPostJson[] = files.map((fileName) => {
     const filePath = path.join(SOURCE_DIR, fileName);
     const raw = fs.readFileSync(filePath, "utf-8");
     const { title, tags, body } = parsePost(raw);
-    const date = resolvePostDate(filePath);
+    const slug = slugify(fileName);
+    const date =
+      existingDates.get(slug) ?? resolvePostDate(filePath).toISOString();
 
     return {
-      slug: slugify(fileName),
+      slug,
       title,
       tags,
-      date: date.toISOString(),
+      date,
       contentHtml: marked.parse(body, { async: false }) as string,
       excerpt: toExcerpt(body),
     };

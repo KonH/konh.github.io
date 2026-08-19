@@ -1,10 +1,14 @@
 import crypto from "crypto";
 import fs from "fs";
+import path from "path";
 import puppeteer from "puppeteer";
 import SkillModel from "../model/SkillModel";
 import WorkModel from "../model/WorkModel";
 import { education, languages, pdfContacts } from "../model/CvData";
 
+// Gitignored build source: vue-cli-service copies it to dist/, and the
+// deploy scripts copy that to the repo root, where it's the single
+// committed copy actually served at /Konstantin_Khitrykh_CV.pdf.
 const PDF_PATH = "public/Konstantin_Khitrykh_CV.pdf";
 const VERSION_PATH = "src/model/CvVersion.ts";
 
@@ -232,6 +236,8 @@ async function generate(): Promise<void> {
     ...(executablePath ? { executablePath } : {}),
     args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
   });
+
+  fs.mkdirSync(path.dirname(PDF_PATH), { recursive: true });
 
   const page = await browser.newPage();
   await page.setContent(html, { waitUntil: "load" });
