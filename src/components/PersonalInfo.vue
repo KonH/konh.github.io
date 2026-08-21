@@ -8,8 +8,8 @@
       />
     </div>
 
-    <h1 class="name">Konstantin Khitrykh</h1>
-    <p class="role"><span class="prompt">~/</span> Senior Software Engineer</p>
+    <h1 class="name">{{ personal.name }}</h1>
+    <p class="role"><span class="prompt">~/</span> {{ personal.title }}</p>
 
     <div class="tags">
       <span class="tag">Unity</span>
@@ -23,20 +23,7 @@
     </div>
 
     <div class="bio">
-      <p>
-        Software engineer with 13+ years of experience, specializing in C# and
-        C++ C# across mobile game development and backend systems.
-      </p>
-      <p>
-        Deep C# background across Unity game development and ASP.NET Core
-        services — including custom SDK design and a high-throughput analytics
-        backend. Open-source contributor with an active
-        <a href="https://github.com/KonH" target="_blank">GitHub profile</a>.
-      </p>
-      <p>
-        Worked at Playrix, developed core gameplay in C++ with active use of
-        AI-assisted workflows for prototyping, code generation, and review.
-      </p>
+      <p v-for="(paragraph, i) in about" :key="i">{{ paragraph }}</p>
     </div>
 
     <div class="actions">
@@ -86,6 +73,7 @@
 
 <script setup lang="ts">
 import { CV_VERSION } from "@/model/CvVersion";
+import { personal, about } from "@/model/CvData";
 </script>
 
 <style scoped>

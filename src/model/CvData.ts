@@ -1,60 +1,18 @@
-export interface EducationEntry {
-  institution: string;
-  degree: string;
-  field: string;
-  period: string;
-}
+import resumeData from "@/data/resume.json";
+import type {
+  ResumeData,
+  PersonalInfoEntry,
+  EducationEntry,
+  LanguageEntry,
+  ContactEntry,
+} from "@/model/ResumeData";
 
-export interface LanguageEntry {
-  language: string;
-  level: string;
-}
+const data = resumeData as ResumeData;
 
-export interface ContactEntry {
-  label: string;
-  value: string;
-  href: string;
-}
+export type { PersonalInfoEntry, EducationEntry, LanguageEntry, ContactEntry };
 
-export const education: EducationEntry[] = [
-  {
-    institution: "Novosibirsk Institute of Economics and Management",
-    degree: "Bachelor's",
-    field: "Computer Science",
-    period: "2009 – 2013",
-  },
-];
-
-export const languages: LanguageEntry[] = [
-  { language: "Russian", level: "Native" },
-  { language: "English", level: "B2" },
-  { language: "Serbian", level: "A2" },
-];
-
-export const pdfContacts: ContactEntry[] = [
-  {
-    label: "Location",
-    value: "Novi Sad, Serbia",
-    href: "",
-  },
-  {
-    label: "Email",
-    value: "konhit@gmail.com",
-    href: "mailto:konhit@gmail.com",
-  },
-  {
-    label: "Phone",
-    value: "+381 62 9750 407",
-    href: "tel:+381629750407",
-  },
-  {
-    label: "GitHub",
-    value: "github.com/KonH",
-    href: "https://github.com/KonH",
-  },
-  {
-    label: "LinkedIn",
-    value: "linkedin.com/in/konhit",
-    href: "https://www.linkedin.com/in/konhit",
-  },
-];
+export const personal: PersonalInfoEntry = data.personal;
+export const about: string[] = data.about;
+export const education: EducationEntry[] = data.education;
+export const languages: LanguageEntry[] = data.languages;
+export const pdfContacts: ContactEntry[] = data.contacts;
