@@ -1,10 +1,9 @@
 import crypto from "crypto";
 import fs from "fs";
-import path from "path";
-import puppeteer from "puppeteer";
-import SkillModel from "../model/SkillModel";
-import WorkModel from "../model/WorkModel";
-import { education, languages, pdfContacts } from "../model/CvData";
+import resumeDataJson from "../data/resume.json";
+import type { ResumeData } from "../model/ResumeData";
+import { renderResumeHtml } from "./resumeTemplate";
+import { renderHtmlToPdf } from "../../tools/resume-pdf-exporter";
 
 // Gitignored build source: vue-cli-service copies it to dist/, and the
 // deploy scripts copy that to the repo root, where it's the single
@@ -27,230 +26,19 @@ export const CV_VERSION = "${hash}";
   console.log(`CV version written: ${hash}`);
 }
 
-function buildHtml(): string {
-  const coreSkills = SkillModel.loadCoreSkills();
-  const jobs = WorkModel.loadAll();
-
-  const col1Categories = ["Game Dev", "Tech", "AI Tools"];
-  const col2Categories = ["Web", "Infrastructure"];
-
-  function renderSkillCol(cats: string[]): string {
-    return coreSkills
-      .filter(([cat]) => cats.includes(cat))
-      .map(([category, skills]) => {
-        const names = skills.map((s) => s.title).join(", ");
-        return `<div class="skill-row"><span class="skill-cat">${category}:</span> ${names}</div>`;
-      })
-      .join("");
-  }
-
-  const skillCol1 = renderSkillCol(col1Categories);
-  const skillCol2 = renderSkillCol(col2Categories);
-
-  const workRows = jobs
-    .map((job) => {
-      const bullets = job.bullets.map((b) => `<li>${b}</li>`).join("");
-      const companyName = job.url
-        ? `<a href="${job.url}"><strong>${job.company}</strong></a>`
-        : `<strong>${job.company}</strong>`;
-      const companyLine = job.companyInfo
-        ? `${companyName}: ${job.companyInfo} <span class="job-company-sep">|</span> ${job.location}`
-        : `${companyName} <span class="job-company-sep">·</span> ${job.location}`;
-      return `
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <span class="job-title">${job.title}</span>
-              <div class="job-company">${companyLine}</div>
-            </div>
-            <span class="job-period">${job.period}</span>
-          </div>
-          <ul>${bullets}</ul>
-        </div>`;
-    })
-    .join("");
-
-  const educationRows = education
-    .map(
-      (e) =>
-        `<div class="edu-row"><span class="edu-inst">${e.institution}</span> — ${e.field}, ${e.degree} <span class="edu-period">${e.period}</span></div>`,
-    )
-    .join("");
-
-  const langItems = languages
-    .map(
-      (l) =>
-        `<span class="lang-item"><strong>${l.language}</strong> ${l.level}</span>`,
-    )
-    .join("");
-
-  const contactItems = pdfContacts
-    .map((c) =>
-      c.href
-        ? `<a href="${c.href}" class="contact-item">${c.value}</a>`
-        : `<span class="contact-item">${c.value}</span>`,
-    )
-    .join('<span class="contact-sep">·</span>');
-
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 9.5pt;
-    color: #1a1a1a;
-    background: #fff;
-    line-height: 1.4;
-  }
-  a { color: #1a1a1a; text-decoration: none; }
-
-  /* Header */
-  .header { text-align: center; margin-bottom: 12px; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; }
-  .header h1 { font-size: 18pt; font-weight: 700; letter-spacing: -0.02em; }
-  .contacts { margin-top: 4px; font-size: 8pt; color: #444; }
-  .contact-item { color: #444; }
-  .contact-sep { margin: 0 5px; color: #aaa; }
-
-  /* Section headings */
-  .section { margin-bottom: 10px; }
-  .section-title {
-    font-size: 7.5pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #555;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2px;
-    margin-bottom: 5px;
-  }
-
-  /* Skills */
-  .skills-cols { display: flex; gap: 24px; font-size: 9pt; color: #1a1a1a; line-height: 1.6; }
-  .skills-col { flex: 1; }
-  .skill-row { margin-bottom: 1px; }
-  .skill-cat { font-weight: 700; color: #333; }
-
-  /* Work */
-  .job { margin-bottom: 8px; }
-  .job-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 2px;
-  }
-  .job-title { font-weight: 700; font-size: 9.5pt; }
-  .job-company { font-size: 8.5pt; color: #444; margin-top: 1px; }
-  .job-company a { color: #444; }
-  .job-company-sep { color: #999; margin: 0 3px; }
-  .job-period { font-size: 8pt; color: #666; white-space: nowrap; margin-left: 8px; }
-  .job ul { margin-left: 14px; }
-  .job li { font-size: 8.5pt; color: #333; margin-bottom: 0; }
-
-  /* Education */
-  .edu-row { font-size: 9pt; }
-  .edu-inst { font-weight: 600; }
-  .edu-period { color: #666; font-size: 8pt; margin-left: 6px; }
-
-  /* Languages */
-  .lang-item { margin-right: 14px; font-size: 9pt; }
-</style>
-</head>
-<body>
-  <div class="header">
-    <h1>Konstantin Khitrykh</h1>
-    <div class="contacts">${contactItems}</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Skills</div>
-    <div class="skills-cols">
-      <div class="skills-col">${skillCol1}</div>
-      <div class="skills-col">${skillCol2}</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Experience</div>
-    ${workRows}
-  </div>
-
-  <div class="section">
-    <div class="section-title">Education</div>
-    ${educationRows}
-  </div>
-
-  <div class="section">
-    <div class="section-title">Languages</div>
-    ${langItems}
-  </div>
-</body>
-</html>`;
-}
-
-// Common install locations for a system-wide Chrome/Chromium/Edge, used as a
-// fallback when puppeteer's own managed Chrome download is missing or
-// corrupted (e.g. a partial download left an executable-less folder behind).
-const SYSTEM_BROWSER_CANDIDATES = [
-  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-  "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-  "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  "/usr/bin/google-chrome",
-  "/usr/bin/chromium-browser",
-  "/usr/bin/chromium",
-];
-
-function resolveExecutablePath(): string | undefined {
-  if (process.env.PUPPETEER_EXECUTABLE_PATH) {
-    return process.env.PUPPETEER_EXECUTABLE_PATH;
-  }
-
-  const managedPath = puppeteer.executablePath();
-  if (managedPath && fs.existsSync(managedPath)) {
-    return undefined; // let puppeteer use its own managed Chrome
-  }
-
-  const systemBrowser = SYSTEM_BROWSER_CANDIDATES.find((p) => fs.existsSync(p));
-  if (systemBrowser) {
-    console.log(
-      `Managed Chrome not found; using system browser: ${systemBrowser}`,
-    );
-    return systemBrowser;
-  }
-
-  console.warn(
-    `Puppeteer's managed Chrome is missing at ${managedPath} and no system browser was found.\n` +
-      "Run `npx puppeteer browsers install chrome` or set PUPPETEER_EXECUTABLE_PATH.",
-  );
-  return undefined;
-}
-
 async function generate(): Promise<void> {
-  const html = buildHtml();
+  const resumeData = resumeDataJson as ResumeData;
+  const html = renderResumeHtml(resumeData);
 
-  const executablePath = resolveExecutablePath();
-  const browser = await puppeteer.launch({
-    ...(executablePath ? { executablePath } : {}),
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+  await renderHtmlToPdf({
+    html,
+    outputPath: PDF_PATH,
+    pdf: {
+      margin: { top: "12mm", right: "14mm", bottom: "12mm", left: "14mm" },
+    },
   });
 
-  fs.mkdirSync(path.dirname(PDF_PATH), { recursive: true });
-
-  const page = await browser.newPage();
-  await page.setContent(html, { waitUntil: "load" });
-  await page.pdf({
-    path: PDF_PATH,
-    format: "A4",
-    printBackground: true,
-    margin: { top: "12mm", right: "14mm", bottom: "12mm", left: "14mm" },
-  });
-
-  await browser.close();
   console.log(`CV PDF generated: ${PDF_PATH}`);
-
   writeCvVersion();
 }
 
