@@ -10,11 +10,6 @@ export interface PersonalInfoEntry {
   title: string;
 }
 
-export interface SkillEntry {
-  title: string;
-  keys: string[];
-}
-
 export interface WorkEntry {
   company: string;
   companyInfo?: string;
@@ -48,9 +43,14 @@ export interface ContactEntry {
 export interface ResumeData {
   personal: PersonalInfoEntry;
   about: string[];
+  // Skill titles only, grouped by category — this is what the resume PDF
+  // actually renders ("Category: Title, Title, ..."). The detailed per-skill
+  // bullet points (SkillEntry["keys"]) are web-only (the /skills accordion),
+  // never appear in the PDF, and are kept in src/model/SkillModel.ts instead
+  // of duplicated here.
   skills: {
-    core: [string, SkillEntry[]][];
-    other: SkillEntry[];
+    core: [string, string[]][];
+    other: string[];
   };
   work: WorkEntry[];
   education: EducationEntry[];

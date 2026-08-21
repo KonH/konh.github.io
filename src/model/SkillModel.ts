@@ -1,7 +1,129 @@
 import resumeData from "@/data/resume.json";
-import type { ResumeData, SkillEntry } from "@/model/ResumeData";
+import type { ResumeData } from "@/model/ResumeData";
 
 const data = resumeData as ResumeData;
+
+// Detailed per-skill bullet points shown in the web /skills accordion. These
+// never appear in the resume PDF — only the skill titles and their category
+// grouping do (src/data/resume.json's skills.core/other) — so they live here
+// rather than being duplicated into the shared JSON data.
+const skillKeys: Record<string, string[]> = {
+  Unity: [
+    "Platforms: Android, iOS, WebGL, tvOS, macOS, Windows",
+    "Stores (in-apps, social): Google Play, AppStore, Amazon",
+    "Plugins: Crashlytics, Facebook, Google Analytics, Vuforia etc",
+    "Services: BrainCloud",
+    "Game templates development",
+    "CPU/memory usage, content optimization",
+    "UI: Unity UI, NGUI",
+    "Asset bundle content/build/usage pipeline",
+    "Editor extensions (custom editors, scene post-processors, tools)",
+    "Batch-mode build extensions",
+    "Unit-tests usage",
+    'Udemy <a href="https://www.udemy.com/certificate/UC-e7b98c69-9c9a-411d-85fb-05e5a296c3f6/" target="_blank">Unity 2019 Learn to write better code making a City Builder</a>',
+    'Udemy <a href="https://www.udemy.com/certificate/UC-9db5ceca-ef3a-4305-bff2-d43eba3d0f15/" target="_blank">RPG Core Combat Creator: Learn Intermediate Unity C# Coding</a>',
+  ],
+  Godot: ["Platforms: standalone", "Pet projects to test different tech"],
+  ".C#": [
+    "Platforms: .NET Framework, .NET Core, Mono",
+    "Frameworks: ASP.NET Core (WebAPI/MVC), ASP.NET (MVC), WinForms, WPF",
+    "Targets: console, standalone, web applications",
+    "CPU/memory usage optimizations",
+    "Database usage: MS SQL, MySQL, MongoDB, CouchDB",
+    "Unt-tests: Nunit, Xunit",
+    'Udemy <a href="https://www.udemy.com/certificate/UC-b92fa8b9-237d-4109-813b-d6e39d25e4f3/" target="_blank">Master .NET and C# Unit Testing with NUnit and Moq</a>',
+    'Udemy <a href="https://www.udemy.com/certificate/UC-2de59618-e48d-4f15-9b8c-e95ebfa7759c/" target="_blank">Learn Parallel Programming with C# and .NET</a>',
+    'Udemy <a href="https://www.udemy.com/certificate/UC-8312afa8-e0ec-49f5-b39b-bd9baef9e595/" target="_blank">Лучшие практики проектирования и реализации API на C#</a>',
+    'Udemy <a href="https://www.udemy.com/certificate/UC-5cdf7732-98f9-4f19-b81d-c1ce9f239a98/" target="_blank">Архитектура ПО: внедрение зависимостей на C#</a>',
+    'Udemy <a href="https://www.udemy.com/certificate/UC-56b07c78-0436-49f0-8fba-f6b0e2ae4898/" target="_blank">Mastering Reactive Extensions with C# and .NET</a>',
+    'Udemy <a href="https://www.udemy.com/certificate/UC-8bd7c2c4-b51b-44d6-b509-a9e073fdd12a/" target="_blank">Advanced Topics in C#</a>',
+    'Udemy <a href="https://www.udemy.com/certificate/UC-609b535d-ad50-42f6-bf0e-8c337e760dd0/" target="_blank">C# Performance Tricks: How To Radically Speed Up Your Code</a>',
+  ],
+  Java: [
+    "Developing new features for high-load game server based on Spring and MySQL/MongoDB",
+    "University project: mobile app for counting expected lifetime based on bad habits and activity",
+    "Working with Unity exported project and native plugin integration",
+  ],
+  Kotlin: [
+    "TeamCity DSL usage: 10 projects, 100 build configurations based on shared codebase",
+    'Develop Android <a href="https://github.com/KonH/MyContract" target="_blank">app</a> for self-motivation',
+  ],
+  "Tech Leadership": [
+    'Podlodka <a href="https://s3.eu-north-1.amazonaws.com/podlodka.crew.cert/techlead1/cert_techlead_1_konh%40yandex.ru.png">TechLead Crew #1</a>',
+    "Podlodka TechLead Crew #2",
+    'Podlodka <a href="https://certificate.podlodka.io/techlead5/en/pdldk3a997d4d9a5d377538e4add4e0d232a4.png">TechLead Crew #5</a>',
+    'Podlodka <a href="https://certificate.podlodka.io/teamlead12/en/pdldk90482eb53b0e3c35a22f1907f05524e6.png">Teamlead Crew #12</a>',
+  ],
+  TypeScript: [
+    "Vue.js: single file components",
+    "Unit-tests: jest",
+    "Management: vue-cli, webpack",
+  ],
+  JavaScript: ["DOM, ajax interactions", "jQuery", "Google Analytics"],
+  "Anthropic Claude": [
+    "AI-assisted workflows for prototyping, code generation, and code review",
+    "Custom prompting rules to improve consistency and development speed",
+    "Integrated into daily development loop at Playrix",
+    "Agents, skills, PRD, Ralph-loop approach",
+  ],
+  "Cursor AI": [
+    "AI-assisted code editor used for C++ and tooling work",
+    "Introduced to team as part of AI workflow initiative",
+  ],
+  "OpenAI Codex": [
+    "Use for pet projects to setup AI-assisted feature development spec-based workflow",
+    "Skills, SpecKit, GitHub issue automation",
+  ],
+  TeamCity: [
+    "CI/CD for up to 10 projects and 100 build configurations",
+    "Agent maintenance, problem solving, plugins usage",
+  ],
+  Docker: [
+    "Containers for Erlang and .NET Core projects",
+    "Local and remote (DigitalOcean, Azure) deployment",
+  ],
+  Lua: [
+    "Scripting within C++ game engine at Playrix",
+    "Gameplay logic and data configuration",
+  ],
+  Tracy: [
+    "Frame profiler used for C++ performance analysis",
+    "Identifying CPU bottlenecks in gameplay and engine systems",
+  ],
+  "Machine learning": [
+    "Algorithms knowledge: decision trees, logistic regression, gradient boosting, neural networks",
+    "Python ML-related tools used: Pandas, Numpy, Scipy, Pandas Scikit, Jupyter Lab",
+    'Coursera course: <a href="https://www.coursera.org/account/accomplishments/certificate/N25HU5LMT7B7" target="_blank">Введение в машинное обучение</a>',
+  ],
+  Go: [
+    'Analytics <a href="https://github.com/KonH/analyticsServer" target="_blank">server</a> with MongoDB storage',
+    'Coursera course <a href="https://www.coursera.org/learn/golang-webservices-1" target="_blank">Разработка веб-сервисов на Go - основы языка</a>',
+  ],
+  Python: [
+    'Books from external service to CSV <a href="https://github.com/KonH/LivelibExport" target="_blank">exporter</a>',
+    'Uncompleted Google Play <a href="https://github.com/KonH/GParser" target="_blank">crawler</a>',
+    "MySQL usage",
+    "Web page parsing and link processing",
+  ],
+  Erlang: ["Client/server application development"],
+  HTML: [
+    "CSS static and dynamic fatures usage",
+    "Markup-generation using PHP, C#, Python",
+    "Bootstrap usage",
+  ],
+  SQL: [
+    "Small databases for pet-projects (sites and standalone)",
+    "Create structure and data fill scripts",
+    "Setup on hostings and standalone environment",
+  ],
+  PHP: [
+    "Project for identify/searching stolen musical instruments (incomplete)",
+    "Social network with user-generated content (closed)",
+    "Register, authorization and other core features",
+    "MySQL usage",
+    "Frameworks: Twig",
+  ],
+};
 
 export default class SkillModel {
   private constructor(
@@ -9,14 +131,14 @@ export default class SkillModel {
     readonly keys: string[],
   ) {}
 
-  private static from(entry: SkillEntry): SkillModel {
-    return new SkillModel(entry.title, entry.keys);
+  private static from(title: string): SkillModel {
+    return new SkillModel(title, skillKeys[title] ?? []);
   }
 
   static loadCoreSkills(): [string, SkillModel[]][] {
-    return data.skills.core.map(([category, skills]) => [
+    return data.skills.core.map(([category, titles]) => [
       category,
-      skills.map(SkillModel.from),
+      titles.map(SkillModel.from),
     ]);
   }
 

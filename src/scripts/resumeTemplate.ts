@@ -11,8 +11,8 @@ export function renderResumeHtml(data: ResumeData): string {
   function renderSkillCol(cats: string[]): string {
     return data.skills.core
       .filter(([cat]) => cats.includes(cat))
-      .map(([category, skills]) => {
-        const names = skills.map((s) => s.title).join(", ");
+      .map(([category, titles]) => {
+        const names = titles.join(", ");
         return `<div class="skill-row"><span class="skill-cat">${category}:</span> ${names}</div>`;
       })
       .join("");
@@ -116,7 +116,7 @@ export function renderResumeHtml(data: ResumeData): string {
   .skill-cat { font-weight: 700; color: #333; }
 
   /* Work */
-  .job { margin-bottom: 8px; }
+  .job { margin-bottom: 8px; break-inside: avoid; page-break-inside: avoid; }
   .job-header {
     display: flex;
     justify-content: space-between;
@@ -146,16 +146,17 @@ export function renderResumeHtml(data: ResumeData): string {
     <div class="contacts">${contactItems}</div>
   </div>
 
-  <div class="section about">
-    ${aboutParagraphs}
-  </div>
-
   <div class="section">
     <div class="section-title">Skills</div>
     <div class="skills-cols">
       <div class="skills-col">${skillCol1}</div>
       <div class="skills-col">${skillCol2}</div>
     </div>
+  </div>
+
+  <div class="section about">
+    <div class="section-title">Summary</div>
+    ${aboutParagraphs}
   </div>
 
   <div class="section">
