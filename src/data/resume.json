@@ -12,7 +12,7 @@
   "skills": {
     "core": [
       ["Game Dev", ["Unity", "Godot"]],
-      ["Tech", [".C#", "Java", "Kotlin", "Tech Leadership"]],
+      ["Tech", ["C#", "C++", "Java", "Kotlin", "Tech Leadership"]],
       ["Web", ["TypeScript", "JavaScript"]],
       ["AI Tools", ["Anthropic Claude", "Cursor AI", "OpenAI Codex"]],
       ["Infrastructure", ["TeamCity", "Docker"]]
