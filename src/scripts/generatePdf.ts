@@ -1,15 +1,20 @@
 import crypto from "crypto";
 import fs from "fs";
-import resumeDataJson from "../data/resume.json";
-import type { ResumeData } from "../model/ResumeData";
-import { renderResumeHtml } from "./resumeTemplate";
-import { renderHtmlToPdf } from "../../tools/resume-pdf-exporter";
+import path from "path";
 
 // Gitignored build source: vue-cli-service copies it to dist/, and the
 // deploy scripts copy that to the repo root, where it's the single
 // committed copy actually served at /Konstantin_Khitrykh_CV.pdf.
 const PDF_PATH = "public/Konstantin_Khitrykh_CV.pdf";
 const VERSION_PATH = "src/model/CvVersion.ts";
+
+// Source of truth for the CV content now lives in the sibling ResumeBuilder
+// repo. This script no longer renders the PDF itself — it just copies the
+// built PDF from there into this repo's build pipeline.
+const SOURCE_PDF_PATH = path.resolve(
+  __dirname,
+  "../../../ResumeBuilder/resumes/base/Konstantin_Khitrykh_CV.pdf",
+);
 
 function writeCvVersion(): void {
   const hash = crypto
@@ -26,23 +31,23 @@ export const CV_VERSION = "${hash}";
   console.log(`CV version written: ${hash}`);
 }
 
-async function generate(): Promise<void> {
-  const resumeData = resumeDataJson as ResumeData;
-  const html = renderResumeHtml(resumeData);
+function generate(): void {
+  if (!fs.existsSync(SOURCE_PDF_PATH)) {
+    throw new Error(
+      `CV source PDF not found at ${SOURCE_PDF_PATH}. Build it in the ResumeBuilder repo first.`,
+    );
+  }
 
-  await renderHtmlToPdf({
-    html,
-    outputPath: PDF_PATH,
-    pdf: {
-      margin: { top: "12mm", right: "14mm", bottom: "12mm", left: "14mm" },
-    },
-  });
+  fs.mkdirSync(path.dirname(PDF_PATH), { recursive: true });
+  fs.copyFileSync(SOURCE_PDF_PATH, PDF_PATH);
 
-  console.log(`CV PDF generated: ${PDF_PATH}`);
+  console.log(`CV PDF copied from ${SOURCE_PDF_PATH} to ${PDF_PATH}`);
   writeCvVersion();
 }
 
-generate().catch((err) => {
-  console.error("PDF generation failed:", err);
+try {
+  generate();
+} catch (err) {
+  console.error("PDF copy failed:", err);
   process.exit(1);
-});
+}
