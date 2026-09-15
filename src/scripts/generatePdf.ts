@@ -8,12 +8,13 @@ import path from "path";
 const PDF_PATH = "public/Konstantin_Khitrykh_CV.pdf";
 const VERSION_PATH = "src/model/CvVersion.ts";
 
-// Source of truth for the CV content now lives in the sibling ResumeBuilder
-// repo. This script no longer renders the PDF itself — it just copies the
-// built PDF from there into this repo's build pipeline.
+// Source of truth for the CV content now lives in the sibling ResumeBuilderData
+// repo, under the base position for the konhit@gmail.com user. This script no
+// longer renders the PDF itself — it just copies the built PDF from there into
+// this repo's build pipeline.
 const SOURCE_PDF_PATH = path.resolve(
   __dirname,
-  "../../../ResumeBuilder/resumes/base/Konstantin_Khitrykh_CV.pdf",
+  "../../../ResumeBuilderData/users/konhit@gmail.com/resumes/base/resume.pdf",
 );
 
 function writeCvVersion(): void {
