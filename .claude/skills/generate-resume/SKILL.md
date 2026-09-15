@@ -1,13 +1,14 @@
 ---
 name: generate-resume
-description: Refresh the CV/resume PDF from the ResumeBuilder repo's built output and get the deployed root-level copy GitHub Pages serves back in sync. Use when the resume PDF in the sibling ResumeBuilder repo (../ResumeBuilder/resumes/base/Konstantin_Khitrykh_CV.pdf) changed and this repo's public/Konstantin_Khitrykh_CV.pdf or root-level Konstantin_Khitrykh_CV.pdf needs to reflect it.
+description: Refresh the CV/resume PDF from the ResumeBuilderData repo's built output and get the deployed root-level copy GitHub Pages serves back in sync. Use when the resume PDF in the sibling ResumeBuilderData repo (../ResumeBuilderData/users/konhit@gmail.com/resumes/base/resume.pdf) changed and this repo's public/Konstantin_Khitrykh_CV.pdf or root-level Konstantin_Khitrykh_CV.pdf needs to reflect it.
 ---
 
 # Generate Resume
 
 The CV PDF is no longer rendered in this repo. The source of truth is
-`../ResumeBuilder/resumes/base/Konstantin_Khitrykh_CV.pdf` (a sibling repo,
-checked out next to this one) — build it there first if it's stale.
+`../ResumeBuilderData/users/konhit@gmail.com/resumes/base/resume.pdf` (the
+base position for the konhit@gmail.com user, in a sibling repo checked out
+next to this one) — build it there first if it's stale.
 `src/scripts/generatePdf.ts` in this repo just copies that built PDF into
 this repo's build pipeline; it does no rendering of its own.
 
@@ -21,8 +22,8 @@ this repo's build pipeline; it does no rendering of its own.
 
    This runs `generateBlog.ts` → `generatePdf.ts` → `vue-cli-service build` →
    `postbuild.ts` in sequence (see `package.json`). `generatePdf.ts`:
-   - Copies `../ResumeBuilder/resumes/base/Konstantin_Khitrykh_CV.pdf` to
-     `public/Konstantin_Khitrykh_CV.pdf`.
+   - Copies `../ResumeBuilderData/users/konhit@gmail.com/resumes/base/resume.pdf`
+     to `public/Konstantin_Khitrykh_CV.pdf`.
    - Writes the new content hash to `src/model/CvVersion.ts` (cache-busts the
      resume link so browsers don't serve a stale PDF after deploy).
 
@@ -61,6 +62,7 @@ the plain copy above is all that's needed.)
 
 ## If it fails with "CV source PDF not found"
 
-`generatePdf.ts` expects `../ResumeBuilder` checked out as a sibling
-directory of this repo. Build the PDF there first (see that repo's own
-CLAUDE.md/README), then re-run this repo's build.
+`generatePdf.ts` expects `../ResumeBuilderData` checked out as a sibling
+directory of this repo. Build the PDF for the konhit@gmail.com user's base
+position there first (see that repo's own CLAUDE.md/README), then re-run
+this repo's build.
