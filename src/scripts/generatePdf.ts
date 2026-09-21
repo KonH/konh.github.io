@@ -2,10 +2,10 @@ import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 
-// Gitignored build source: vue-cli-service copies it to dist/, and the
-// deploy scripts copy that to the repo root, where it's the single
-// committed copy actually served at /Konstantin_Khitrykh_CV.pdf.
-const PDF_PATH = "public/Konstantin_Khitrykh_CV.pdf";
+// The repo-root copy GitHub Pages serves at /Konstantin_Khitrykh_CV.pdf is
+// the only one that exists here: pulling straight to it keeps the PDF from
+// being copied through public/ and dist/ on the way to the same bytes.
+const PDF_PATH = "Konstantin_Khitrykh_CV.pdf";
 const VERSION_PATH = "src/model/CvVersion.ts";
 
 // Source of truth for the CV content now lives in the sibling ResumeBuilderData
@@ -39,7 +39,6 @@ function generate(): void {
     );
   }
 
-  fs.mkdirSync(path.dirname(PDF_PATH), { recursive: true });
   fs.copyFileSync(SOURCE_PDF_PATH, PDF_PATH);
 
   console.log(`CV PDF copied from ${SOURCE_PDF_PATH} to ${PDF_PATH}`);

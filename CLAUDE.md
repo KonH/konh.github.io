@@ -25,7 +25,7 @@ There are no unit tests in this repo.
 
 `npm run build` runs three steps in order (see `package.json`):
 
-1. `src/scripts/generatePdf.ts` — copies the CV PDF from the sibling `../ResumeBuilderData` repo (`users/konhit@gmail.com/resumes/base/resume.pdf`, the base position for the konhit@gmail.com user, the source of truth) to `public/Konstantin_Khitrykh_CV.pdf` (a gitignored build intermediate — the deploy scripts copy the built `dist/Konstantin_Khitrykh_CV.pdf` to the repo root, which is the single committed copy actually served), so the PDF ships with the build. Also rewrites `src/model/CvVersion.ts` with a content hash of the PDF, used to cache-bust the resume link.
+1. `src/scripts/generatePdf.ts` — copies the CV PDF from the sibling `../ResumeBuilderData` repo (`users/konhit@gmail.com/resumes/base/resume.pdf`, the base position for the konhit@gmail.com user, the source of truth) to the repo-root `Konstantin_Khitrykh_CV.pdf`. That root copy is the only one in this repo and the one GitHub Pages serves, so the PDF never travels through `public/` or `dist/`; `npm run serve` is told about that one file in `vue.config.js`. Also rewrites `src/model/CvVersion.ts` with a content hash of the PDF, used to cache-bust the resume link.
 2. `vue-cli-service build` — webpack build into `dist/`.
 3. `src/scripts/postbuild.ts` — copies `dist/index.html` to `dist/404.html`.
 
