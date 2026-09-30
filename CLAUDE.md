@@ -47,6 +47,8 @@ GitHub Pages serves this user page **from the repo root of `master`**. `dist/` i
 - Skill descriptions in `SkillModel` contain raw HTML strings (rendered with `v-html`); `vue/no-v-html` is disabled deliberately.
 - Global styles and design tokens (dark GitHub-like theme, CSS custom properties) live in `src/App.vue`.
 - `custom/` holds standalone static content served as-is by Pages (design prototypes, GPT experiments) — it is not part of the Vue build; its HTML files are self-contained and opened directly in a browser.
+- `custom/iterative-game/` is a generated Godot Web export committed straight to `master` by the IterativeGame repo's "Web Build (Experimental)" workflow (marked by its `iterativegame-build.json`) — never hand-edit it.
+- The root `.nojekyll` must stay: it stops Pages' Jekyll step from dropping underscore-prefixed paths such as that export's `_framework/` (.NET runtime).
 
 ## Conventions
 
