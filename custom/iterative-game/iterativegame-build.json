@@ -1,0 +1,11 @@
+{
+  "version": "0.1.117",
+  "build": "debug",
+  "commit": "e28ee580cb43993673d1e32915635d5c77fd2bf2",
+  "run_id": "36759251854",
+  "run_attempt": "1",
+  "godot_engine_commit": "a5612de699ab1fbad8e5ade0f635469234433c7f",
+  "godot_demo_commit": "8aa8b99d6ecec8e74d63d11208bdb570e80bc752",
+  "godot_net_sdk": "4.8.0-dev",
+  "dotnet_sdk": "11.0.100-preview.7.26381.103"
+}
