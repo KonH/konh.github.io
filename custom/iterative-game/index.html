@@ -92,6 +92,148 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+<style>
+#ig-diag-badge { position: fixed; left: 4px; bottom: 4px; z-index: 2147483647; font: 11px/1.4 monospace; color: #ddd; background: rgba(0, 0, 0, 0.55); border-radius: 4px; padding: 2px 6px; cursor: pointer; user-select: none; }
+#ig-diag-badge.ig-has-errors { background: rgba(170, 20, 20, 0.85); color: #fff; }
+#ig-diag-panel { position: fixed; inset: 8px; z-index: 2147483647; display: none; flex-direction: column; background: rgba(10, 10, 10, 0.94); color: #ddd; font: 11px/1.35 monospace; border: 1px solid #555; border-radius: 6px; }
+#ig-diag-panel.ig-open { display: flex; }
+#ig-diag-bar { display: flex; gap: 6px; padding: 6px; border-bottom: 1px solid #444; }
+#ig-diag-bar button { font: 12px sans-serif; padding: 4px 10px; }
+#ig-diag-log { flex: 1; overflow: auto; margin: 0; padding: 6px; white-space: pre-wrap; word-break: break-word; }
+#ig-diag-log .ig-error { color: #ff8080; }
+#ig-diag-log .ig-warn { color: #ffd480; }
+</style>
+<script>
+// IterativeGame experimental Web build diagnostics (injected by scripts/web_experimental/prepare_project.py).
+// Mobile browsers hide the console, so this mirrors console output and uncaught errors into an on-page
+// log: a small badge (bottom-left) shows the build and error count; tap it to read or copy the log.
+(function () {
+  var lines = [];
+  var errorCount = 0;
+  var build = '?';
+  var started = Date.now();
+  var badge = null;
+  var panel = null;
+  var logView = null;
+
+  function stamp() {
+    return ((Date.now() - started) / 1000).toFixed(1) + 's';
+  }
+
+  function text(args) {
+    return Array.prototype.map.call(args, function (a) {
+      if (a instanceof Error) {
+        return a.stack || String(a);
+      }
+      if (typeof a === 'object') {
+        try { return JSON.stringify(a); } catch (e) { return String(a); }
+      }
+      return String(a);
+    }).join(' ');
+  }
+
+  function add(level, message) {
+    lines.push({ level: level, message: '[' + stamp() + '] ' + message });
+    if (lines.length > 400) {
+      lines.shift();
+    }
+    if (level === 'error') {
+      errorCount++;
+    }
+    render();
+  }
+
+  function render() {
+    if (!badge) {
+      return;
+    }
+    badge.textContent = 'build ' + build + ' · ' + errorCount + (errorCount === 1 ? ' error' : ' errors');
+    badge.className = errorCount > 0 ? 'ig-has-errors' : '';
+    if (panel.className === 'ig-open') {
+      logView.textContent = '';
+      lines.forEach(function (line) {
+        var row = document.createElement('div');
+        row.className = line.level === 'error' ? 'ig-error' : line.level === 'warn' ? 'ig-warn' : '';
+        row.textContent = line.message;
+        logView.appendChild(row);
+      });
+      logView.scrollTop = logView.scrollHeight;
+    }
+  }
+
+  ['log', 'info', 'warn', 'error'].forEach(function (level) {
+    var original = console[level];
+    console[level] = function () {
+      add(level === 'info' ? 'log' : level, text(arguments));
+      return original.apply(console, arguments);
+    };
+  });
+  window.addEventListener('error', function (e) {
+    add('error', 'Uncaught ' + (e.error && e.error.stack ? e.error.stack : e.message) + (e.filename ? ' @ ' + e.filename + ':' + e.lineno : ''));
+  });
+  window.addEventListener('unhandledrejection', function (e) {
+    var r = e.reason;
+    add('error', 'Unhandled rejection: ' + (r && r.stack ? r.stack : String(r)));
+  });
+
+  function copyLog() {
+    var all = 'build ' + build + ' · ' + navigator.userAgent + '\n' + lines.map(function (l) { return l.message; }).join('\n');
+    var done = function () { add('log', 'diagnostics: log copied to clipboard'); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(all).then(done, function () { fallbackCopy(all); done(); });
+    } else {
+      fallbackCopy(all);
+      done();
+    }
+  }
+
+  function fallbackCopy(value) {
+    var area = document.createElement('textarea');
+    area.value = value;
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand('copy'); } catch (e) { /* nothing else to try */ }
+    document.body.removeChild(area);
+  }
+
+  function button(label, onClick) {
+    var b = document.createElement('button');
+    b.textContent = label;
+    b.addEventListener('click', function (e) { e.stopPropagation(); onClick(); });
+    return b;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    badge = document.createElement('div');
+    badge.id = 'ig-diag-badge';
+    badge.addEventListener('click', function () {
+      panel.className = 'ig-open';
+      render();
+    });
+    panel = document.createElement('div');
+    panel.id = 'ig-diag-panel';
+    var bar = document.createElement('div');
+    bar.id = 'ig-diag-bar';
+    bar.appendChild(button('Close', function () { panel.className = ''; }));
+    bar.appendChild(button('Copy log', copyLog));
+    logView = document.createElement('div');
+    logView.id = 'ig-diag-log';
+    panel.appendChild(bar);
+    panel.appendChild(logView);
+    document.body.appendChild(badge);
+    document.body.appendChild(panel);
+    render();
+
+    fetch('iterativegame-build.json', { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (info) {
+        build = (info.commit || '?').slice(0, 7) + (info.build ? ' ' + info.build : '');
+        add('log', 'diagnostics: build ' + JSON.stringify(info));
+      })
+      .catch(function (e) { add('warn', 'diagnostics: build info unavailable: ' + e); });
+  });
+})();
+</script>
 
 	</head>
 	<body>
